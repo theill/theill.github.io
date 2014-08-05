@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Peter Theill
+tagline:          'Personal web site of Peter Theill'
+description:      ''
+url:              http://theill.com
+
+author:
+  name:           'Peter Theill'
+  url:            https://theill.com/cv
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/poole/hyde
