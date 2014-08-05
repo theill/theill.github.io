@@ -7,7 +7,7 @@ I released some of my first software products back in 1994 and since then I've r
 
 In no specific order here is a more or less complete list of all my personal projects.
 
-### Classic ASP Web Sites
+### Classic ASP Sites
 
 * [ConquerChat](http://github.com/theill/conquerchat)
 * [ConquerMarks](http://github.com/theill/conquermarks)
@@ -15,9 +15,19 @@ In no specific order here is a more or less complete list of all my personal pro
 * [ConquerSMS](http://github.com/theill/conquersms)
 
 
-### ASP.NET Web Sites
+### ASP.NET Sites
 
 * [Iquomi](https://code.google.com/p/iquomi/)
+* [Transmit](http://transmit.commanigy.com/)
+* [Protect .APP](http://protectdotapp.commanigy.com/)
+
+### Ruby On Rails Sites
+
+* [BilledID](http://billedid.dk/)
+* [Hurtig Moms](http://hurtigmoms.heroku.com/)
+* [ShoutSMS](http://shoutsms.commanigy.com/)
+* [Observer](http://observerq.com/)
+* [LIFESTYLEapps](http://lifestyleapps.com/)
 
 
 ### Windows Applications
@@ -28,6 +38,22 @@ In no specific order here is a more or less complete list of all my personal pro
 * [FontSelector](http://github.com/theill/fontselector)
 * [HTML Font Colorizer](http://github.com/theill/html-font-colorizer)
 * [RGB Color Box](http://github.com/theill/rgb-color-box)
+* [Slingshot](http://slingshot.commanigy.com/)
+* [Bucket!](http://bucket.commanigy.com/)
+
+
+### Mac Applications
+
+* [Wallpapery](http://www.wallpaperyapp.com/)
+
+
+### iOS Applications
+
+* [Baby Art](http://www.babyarty.com/)
+* [Twpie](http://twpie.commanigy.com/)
+* [Color Browser](http://incognito.commanigy.com/)
+* [Tour 2010 LIVE](http://tour2010.commanigy.com/)
+* [KirkeApp](http://kirkeapp.dk/)
 
 
 ### Java Applet Components
@@ -49,6 +75,7 @@ In no specific order here is a more or less complete list of all my personal pro
 
 * Danmarks Dårligste Reklamer
 * Kom med din mening
+* [Almen Viden](http://www.theill.com/almenviden.dk/)
 
 
 ### Other Web Sites
