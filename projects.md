@@ -17,7 +17,7 @@ In no specific order here is a more or less complete list of all my personal pro
 
 ### ASP.NET Sites
 
-* [Iquomi](https://code.google.com/p/iquomi/)
+* [Iquomi](https://github.com/theill/iquomi)
 * [Transmit](http://transmit.commanigy.com/) (open-source https://bitbucket.org/theill/transmit)
 * [Protect .APP](http://protectdotapp.commanigy.com/)
 
@@ -34,13 +34,13 @@ In no specific order here is a more or less complete list of all my personal pro
 ### Windows Applications
 
 * [ConquerCam](http://github.com/theill/conquercam)
-* [FillOut Manager](http://github.com/theill/fillout-manager)
 * [FontLister](http://github.com/theill/fontlister)
+* [FillOut Manager](http://github.com/theill/fillout-manager)
 * [FontSelector](http://github.com/theill/fontselector)
 * [HTML Font Colorizer](http://github.com/theill/html-font-colorizer)
 * [RGB Color Box](http://github.com/theill/rgb-color-box)
-* [Slingshot](http://slingshot.commanigy.com/)
-* [Bucket!](http://bucket.commanigy.com/)
+* [Slingshot](https://github.com/theill/slingshot)
+* [Bucket!](https://github.com/theill/bucket)
 
 
 ### Mac Applications

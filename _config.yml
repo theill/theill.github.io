@@ -6,9 +6,9 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Peter Theill
-tagline:          'Personal web site of Peter Theill'
-description:      ''
+title:            'The Ill Site'
+tagline:          'Peter Theill and his font viewer, webcam, free asp chat system, free asp sms sender, free form filler, free asp bookmark manager'
+description:      'Personal web site of Peter Theill'
 url:              http://theill.com
 
 author:
