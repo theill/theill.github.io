@@ -100,7 +100,7 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 * February 10: Meet Microsoft - .NET 2.0 (Copenhagen, DK)
 
 
-### Seminars joined in 2004
+### Conferences joined in 2004
 
 * December 2: Meet Microsoft - Windows, mobile and Office (Copenhagen, DK)
 * September 24: C# Platform and language (Copenhagen, DK)
@@ -110,7 +110,7 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 * February 25: Java&#39;s implementation of Generics (Copenhagen, DK)
 
 
-### Seminars joined in 2003
+### Conferences joined in 2003
 
 * October 21: Meet Microsoft - for udviklere (Copenhagen, DK)
 * September 19: Meet Microsoft w/ Steve Ballmer (Copenhagen, DK)
