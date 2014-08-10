@@ -7,10 +7,10 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 
 ### Work
 
-* 2011- Partner, [Drivr (previously Click A Taxi)](http://drivr.com)
-* 2009-2011: Partner, [GoMore](http://gomore.dk)
-* 2008-2009: Partner, [Gazebo](http://gzb.dk)
-* 2006-2008: Developer, [ZYB](http://zyb.com)
+* 2011-Today: Partner, [Drivr (previously Click A Taxi)](http://drivr.com)
+* 2009-11: Partner, [GoMore](http://gomore.dk)
+* 2008-09: Partner, [Gazebo](http://gzb.dk)
+* 2006-08: Developer, [ZYB](http://zyb.com)
 * 2004-06: .NET consultant, [Progressive IT](http://www.progressive.dk)
 * 2001-05: PHP/MySQL consultant, [Digital River](http://www.digitalriver.com)
 * 2002-04: Part-time Software Developer, [Intec Telecom Systems](http://www.intec-telecom-systems.com)
@@ -22,10 +22,10 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 
 ### Roles
 
-* 2011-2013: Lead Architect, GoMore
-* 2010-2011: Interim CTO, Børn i byen
-* 2002-2005: Architect, Filebasket
-* 2000-2002: Team Leader, Digiquant Web
+* 2011-13: Lead Architect, GoMore
+* 2010-11: Interim CTO, Børn i byen
+* 2002-05: Architect, Filebasket
+* 2000-02: Team Leader, Digiquant Web
 
 
 ### Education
