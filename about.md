@@ -68,13 +68,13 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 ### Expertise & awards
 
 * 2009- : Part of Copenhagen Ruby Brigade
-* 2004-2006: Part of the Danish Microsoft Partners Expert Team for Office clients
+* 2004-06: Part of the Danish Microsoft Partners Expert Team for Office clients
 * 2006: Received Time Magazine's "[Person of the Year](http://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year))" award
 
 
 ### Conferences joined in 2009 and later
 
-* Stopped keeping track of them all :)
+* Stopped keeping track 
 
 
 ### Conferences joined in 2008
@@ -120,19 +120,20 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 
 ### Publications
 
-* 2006: <a href="/publications/authx.pdf">Authorization in XML Store</a> for Department of Computer Science, University of Copenhagen
-* 1998: <a href="/publications/billetbestilling.pdf">Billetbestillingssystem</a> for Nordisk Film Biografer (in Danish)
+* 2006: [Authorization in XML Store](/public/publications/authx.pdf) for Department of Computer Science, University of Copenhagen
+* 1998: [Billetbestillingssystem](/public/publications/billetbestilling.pdf) for Nordisk Film Biografer (in Danish)
 
 
-### Sparetime
+### Sparetime Challenges
 
+* 2013: Christiansborg Rundt (2km swim)
 * 2012: Christiansborg Rundt (2km swim)
-* 2011: Challenge Copenhagen 2011 (ironman distance)
+* 2011: Challenge Copenhagen 2011 (Ironman distance)
 * 2010: Great Wall Marathon
 * 2009: France Ironman
 * 2009: Hillerød Triathlon
 * 2008: New York City Marathon
-* 2008: DTU Adventure Race
+* 2008: DTU Adventure Race (24h race)
 * 2008: Hillerød Triathlon
-* 2007: DTU Adventure Race
+* 2007: DTU Adventure Race (24h race)
 * 2006: Copenhagen Marathon
