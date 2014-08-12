@@ -7,7 +7,7 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 
 ### Work
 
-* 2011-Today: Partner, [Drivr (previously Click A Taxi)](http://drivr.com)
+* 2011- : Partner, [Drivr (previously Click A Taxi)](http://drivr.com)
 * 2009-11: Partner, [GoMore](http://gomore.dk)
 * 2008-09: Partner, [Gazebo](http://gzb.dk)
 * 2006-08: Developer, [ZYB](http://zyb.com)
@@ -30,26 +30,22 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 
 ### Education
 
-* 2006-: Undergraduate - Master of Science at DIKU
+* 2006- : Undergraduate - Master of Science at DIKU
 * 2002-06: Bachelor of Science at DIKU
 * 1996-98: Datamatician at Roskilde Business College
 * 1993-96: Gymnasium at Stenhus Gymnasium
 * 1991-93: Basic school at Stenhus Kostskole
 * 1985-91: Basic school at Kundby Skole
 
-### Languages of communication
 
-* Danish (native tongue)
-* English
-
-
-### Languages of programming
+### Languages
 
 * Objective-C, C#, Java, C++: Very proficient
 * PHP (3.x, 4.x), Ruby (including Ruby on Rails), Pascal (Turbo- &amp; Delphi variants), Basic (MS- 
 &amp; Visual-): Very proficient
 * Perl: Proficient
-* Common LISP, Moscow ML, Ada: Primarily academic use
+* Common LISP, Moscow ML, Ada: Primarily academic use only
+* Danish, English: Very proficient
 
 
 ### Certifications
@@ -59,63 +55,10 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 * Certified Turbo Pascal Programmer (in 1996)
 
 
-### Public code repositories
+### Repositories
 
 * [http://github.com/theill](http://github.com/theill)
 * [http://bitbucket.org/theill](http://bitbucket.org/theill)
-
-
-### Expertise & awards
-
-* 2009- : Part of Copenhagen Ruby Brigade
-* 2004-06: Part of the Danish Microsoft Partners Expert Team for Office clients
-* 2006: Received Time Magazine's "[Person of the Year](http://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year))" award
-
-
-### Conferences joined in 2009 and later
-
-* Stopped keeping track 
-
-
-### Conferences joined in 2008
-
-* April 1-2: RubyFools (ITU, Copenhagen, DK)
-* September 28: TechTalk with Anders Hejlsberg &amp; Steve Ballmer
-
-
-### Conferences joined in 2006
-
-* September 1-3: Microsoft Campus Days 2006 (Lyngby, DK)
-* April 6: Meet Microsoft - Windows Vista for IT Profesionelle (Copenhagen, DK)
-* March 21-23: Microsoft Office System Developers Conference 2006 (Redmond, US)
-
-
-### Conferences joined in 2005
-
-* September 21: Meet Microsoft - Visual Studio Tools for Office (Copenhagen, DK)
-* August 8-11: Microsoft Summer Camp 2005 (Vedb<span lang="da">æ</span>k, DK)
-* April 7: Developing with SQL Server 2005 (Copenhagen, DK)
-* March 23: Visual Studio 2005 Team System (Copenhagen, DK)
-* March 9: IBM Software Developer Days - .NET Focused (Copenhagen, DK)
-* February 10: Meet Microsoft - .NET 2.0 (Copenhagen, DK)
-
-
-### Conferences joined in 2004
-
-* December 2: Meet Microsoft - Windows, mobile and Office (Copenhagen, DK)
-* September 24: C# Platform and language (Copenhagen, DK)
-* June 7: ASP.NET RoadShow (Copenhagen, DK)
-* May 11: Meet Microsoft - Focus on security (Copenhagen, DK)
-* March 30: Meet Microsoft - Smart Client Development (Copenhagen, DK)
-* February 25: Java&#39;s implementation of Generics (Copenhagen, DK)
-
-
-### Conferences joined in 2003
-
-* October 21: Meet Microsoft - for udviklere (Copenhagen, DK)
-* September 19: Meet Microsoft w/ Steve Ballmer (Copenhagen, DK)
-* May 15: Meet Microsoft Lancering (Copenhagen, DK)
-* February 28: Meet Microsoft - Den tr&aring;dl&oslash;se verden (Copenhagen, DK)
 
 
 ### Publications
@@ -124,7 +67,40 @@ My name is Peter Theill and I'm a software developer. I started coding back in 1
 * 1998: [Billetbestillingssystem](/public/publications/billetbestilling.pdf) for Nordisk Film Biografer (in Danish)
 
 
-### Sparetime Challenges
+### Expertise & Awards
+
+* 2009- : Part of Copenhagen Ruby Brigade
+* 2004-06: Part of the Danish Microsoft Partners Expert Team for Office clients
+* 2006: Received Time Magazine's "[Person of the Year](http://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year))" award
+
+
+### Conferences
+
+* Stopped keeping track in 2009
+* April 1-2, 2008: RubyFools (ITU, Copenhagen, DK)
+* September 28, 2008: TechTalk with Anders Hejlsberg &amp; Steve Ballmer
+* September 1-3, 2006: Microsoft Campus Days 2006 (Lyngby, DK)
+* April 6, 2006: Meet Microsoft - Windows Vista for IT Profesionelle (Copenhagen, DK)
+* March 21-23, 2006: Microsoft Office System Developers Conference 2006 (Redmond, US)
+* September 21, 2005: Meet Microsoft - Visual Studio Tools for Office (Copenhagen, DK)
+* August 8-11, 2005: Microsoft Summer Camp 2005 (Vedb<span lang="da">æ</span>k, DK)
+* April 7, 2005: Developing with SQL Server 2005 (Copenhagen, DK)
+* March 23, 2005: Visual Studio 2005 Team System (Copenhagen, DK)
+* March 9, 2005: IBM Software Developer Days - .NET Focused (Copenhagen, DK)
+* February 10, 2005: Meet Microsoft - .NET 2.0 (Copenhagen, DK)
+* December 2, 2004: Meet Microsoft - Windows, mobile and Office (Copenhagen, DK)
+* September 24, 2004: C# Platform and language (Copenhagen, DK)
+* June 7, 2004: ASP.NET RoadShow (Copenhagen, DK)
+* May 11, 2004: Meet Microsoft - Focus on security (Copenhagen, DK)
+* March 30, 2004: Meet Microsoft - Smart Client Development (Copenhagen, DK)
+* February 25, 2004: Java&#39;s implementation of Generics (Copenhagen, DK)
+* October 21, 2003: Meet Microsoft - for udviklere (Copenhagen, DK)
+* September 19, 2003: Meet Microsoft w/ Steve Ballmer (Copenhagen, DK)
+* May 15, 2003: Meet Microsoft Lancering (Copenhagen, DK)
+* February 28, 2003: Meet Microsoft - Den tr&aring;dl&oslash;se verden (Copenhagen, DK)
+
+
+### Sparetime Fun
 
 * 2013: Christiansborg Rundt (2km swim)
 * 2012: Christiansborg Rundt (2km swim)
