@@ -3,7 +3,9 @@ layout: page
 title: About
 ---
 
-My name is Peter Theill and I'm a software developer. I started coding back in 1987 on a C64 but got more serious around 1994 where I released some of my first shareware products.
+My name is Peter Theill. I'm a software developer and co-founder of [Drivr](http://drivr.com/). I started coding way back in 1987 on a good old C64 and got more serious around 1994 where some of my first shareware products were released.
+
+---
 
 ### Work
 

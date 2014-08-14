@@ -3,5 +3,5 @@ layout: page
 title: Contact
 ---
 
-Get hold on me [@theill](https://twitter.com/theill)
+You are able to get hold on me on <peter@theill.com> or by tweeting [@theill](https://twitter.com/theill)
 

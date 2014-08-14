@@ -3,9 +3,9 @@ layout: page
 title: Projects
 ---
 
-I released some of my first software products back in 1994 and since then I've released a broad range of projects across various platforms and using all kinds of licensing forms .. gotta try 'em all, right :-)
+I released some of my first software products back in 1994 and since then I have released a broad range of projects across various platforms and using all kinds of licensing forms.
 
-In no specific order here is a more or less complete list of all my personal projects.
+In no specific order the projects below are more or less a full list of all these personal projects.
 
 ### Classic ASP Sites
 
@@ -18,8 +18,8 @@ In no specific order here is a more or less complete list of all my personal pro
 ### ASP.NET Sites
 
 * [Iquomi](https://github.com/theill/iquomi)
-* [Transmit](http://transmit.commanigy.com/) (open-source https://bitbucket.org/theill/transmit)
-* [Protect .APP](http://protectdotapp.commanigy.com/)
+* [Transmit](https://github.com/theill/transmit)
+* [Protect .APP](https://github.com/theill/protectdotapp)
 
 
 ### Ruby On Rails Sites
