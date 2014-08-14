@@ -24,7 +24,7 @@ In no specific order the projects below are more or less a full list of all thes
 
 ### Ruby On Rails Sites
 
-* [BilledID](http://billedid.dk/)
+* [BilledID](https://github.com/theill/billedid)
 * [Hurtig Moms](http://hurtigmoms.heroku.com/)
 * [ShoutSMS](http://shoutsms.commanigy.com/)
 * [Observer](http://observerq.com/)
