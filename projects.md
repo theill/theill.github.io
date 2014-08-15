@@ -35,9 +35,9 @@ In no specific order the projects below are more or less a full list of all thes
 
 * [ConquerCam](http://www.conquercam.com)
 * [FontLister](http://www.fontlister.com)
-* [FillOut Manager](http://fontlister.com/fillout/)
-* [FontSelector](http://fontlister.com/fs/)
-* [HTML Font Colorizer](http://fontlister.com/hfc/)
+* [FillOut Manager](http://theill.com/fillout/)
+* [FontSelector](http://theill.com/fs/)
+* [HTML Font Colorizer](http://theill.com/hfc/)
 * [RGB Color Box](http://theill.com/rcb/)
 * [Slingshot](https://github.com/theill/slingshot)
 * [Bucket!](https://github.com/theill/bucket)
