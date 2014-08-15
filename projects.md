@@ -33,12 +33,12 @@ In no specific order the projects below are more or less a full list of all thes
 
 ### Windows Applications
 
-* [ConquerCam](http://github.com/theill/conquercam)
-* [FontLister](http://github.com/theill/fontlister)
-* [FillOut Manager](http://github.com/theill/fillout-manager)
-* [FontSelector](http://github.com/theill/fontselector)
-* [HTML Font Colorizer](http://github.com/theill/html-font-colorizer)
-* [RGB Color Box](http://github.com/theill/rgb-color-box)
+* [ConquerCam](http://www.conquercam.com)
+* [FontLister](http://www.fontlister.com)
+* [FillOut Manager](http://fontlister.com/fillout/)
+* [FontSelector](http://fontlister.com/fs/)
+* [HTML Font Colorizer](http://fontlister.com/hfc/)
+* [RGB Color Box](http://theill.com/rcb/)
 * [Slingshot](https://github.com/theill/slingshot)
 * [Bucket!](https://github.com/theill/bucket)
 
