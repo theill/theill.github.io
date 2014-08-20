@@ -45,8 +45,8 @@ In no specific order the projects below are more or less a full list of all thes
 
 ### Mac Applications
 
-* [Wallpapery](http://www.wallpaperyapp.com/)
-* [PosttApp](https://github.com/theill/postapp)
+* [Wallpapery](http://www.wallpaperyapp.com)
+* [PosttApp](https://github.com/theill/posttapp)
 
 
 ### iOS Applications
