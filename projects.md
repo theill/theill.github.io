@@ -7,30 +7,6 @@ I released some of my first software products back in 1994 and since then I have
 
 In no specific order the projects below are more or less a full list of all these personal projects.
 
-### Classic ASP Sites
-
-* [ConquerChat](http://github.com/theill/conquerchat)
-* [ConquerMarks](http://github.com/theill/conquermarks)
-* [ConquerRSS](http://github.com/theill/conquerrss)
-* [ConquerSMS](http://github.com/theill/conquersms)
-
-
-### ASP.NET Sites
-
-* [Iquomi](https://github.com/theill/iquomi)
-* [Transmit](https://github.com/theill/transmit)
-* [Protect .APP](https://github.com/theill/protectdotapp)
-
-
-### Ruby On Rails Sites
-
-* [BilledID](https://github.com/theill/billedid)
-* [Hurtig Moms](http://hurtigmoms.heroku.com/)
-* [ShoutSMS](http://shoutsms.commanigy.com/)
-* [Observer](http://observerq.com/)
-* [LIFESTYLEapps](http://lifestyleapps.com/)
-
-
 ### Windows Applications
 
 * [ConquerCam](http://www.conquercam.com)
@@ -56,6 +32,30 @@ In no specific order the projects below are more or less a full list of all thes
 * [Color Browser](http://incognito.commanigy.com/)
 * [Tour 2010 LIVE](http://tour2010.commanigy.com/)
 * [KirkeApp](http://kirkeapp.dk/)
+
+
+### Classic ASP Sites
+
+* [ConquerChat](http://github.com/theill/conquerchat)
+* [ConquerMarks](http://github.com/theill/conquermarks)
+* [ConquerRSS](http://github.com/theill/conquerrss)
+* [ConquerSMS](http://github.com/theill/conquersms)
+
+
+### ASP.NET Sites
+
+* [Iquomi](https://github.com/theill/iquomi)
+* [Transmit](https://github.com/theill/transmit)
+* [Protect .APP](https://github.com/theill/protectdotapp)
+
+
+### Ruby On Rails Sites
+
+* [BilledID](https://github.com/theill/billedid)
+* [Hurtig Moms](http://hurtigmoms.heroku.com/)
+* [ShoutSMS](http://shoutsms.commanigy.com/)
+* [Observer](http://observerq.com/)
+* [LIFESTYLEapps](http://lifestyleapps.com/)
 
 
 ### Java Applet Components
