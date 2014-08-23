@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link REL="STYLESHEET" TYPE="text/css" HREF="tekster.css">
+ <title>Svendsk - Hvad er en grammatik?</title>
+<link rel="stylesheet" type="text/css" href="../css/theill.css">
+</head>
+
+<body LINK="#0000FF" BGCOLOR="#FFFFFF" TEXT="#000000" VLINK="#800080" ALINK="#FF0000">
+<h1>Hvad er en grammatik?</h1>
+
+En grammatik er bestemmende for syntaksen i et sprog. Syntaksen kan bestemmes top-down, idet man siger hvordan hvert enkelt komponent er konstrueret ud fra simplere komponenter. Således er fx en <font FACE="Courier New">ID</font> bygget op af bogstaver, cifre og underscores, og <i>skal</i> starte med et bogstav. Dette kunne medføre en delmængde af en grammatik, der så således ud:<br>
+<br>
+
+<pre>
+ID    -&gt; bogstav tegn
+tegn  -&gt; bogstav tegn
+         | ciffer tegn
+         | &#146;_&#146; tegn
+         | e
+</pre>
+
+Tegnet <font FACE="Courier New">e</font> kaldes <i>epsilon</i>, og betyder i ovenstående at et <font FACE="Courier New">tegn</font> kan være tomt. Det vil med andre ord sige, at en ID kan nøjes med at være et bogstav, eftersom der først kommer et bogstav og derefter komponenten <font FACE="Courier New">tegn</font>, der kan være epsilon. <font FACE="Courier New">tegn</font> er rekursivt, eftersom det kan &#146;kalde&#146; sig selv.<br>
+<br>
+Grammatikken bestemmer om rækkefølgen af komponenter i et sprog er lovlige vha. derivation. I hvert skridt af en derivation, sker der en udskiftning, der bygger på et valg i grammatikken. Et element der ikke kan brydes yderligere ned (eller deriveres), kaldes en <i>terminal</i>. Alle andre elementer kaldes <i>non-terminaler</i>.<br>
+<br>
+Grammatikken benyttes af compileren, eftersom det der kompileres gerne skulle stemme overens med sprogets grammatik. En given compiler er derfor nærmest opbygget omkring grammatikken.<br>
+<br>
+Nedenfor har vi vist grammatikken for Svendsk. I stedet for tegnet <font FACE="Courier New">e</font> har vi indsat den ækvivalente kommentar <font FACE="Courier New">/* epsilon */</font>. For overskuelighedens skyld, har vi skrevet alle terminaler med store bogstaver, og non-terminaler med små.<br>
+<br>
+<pre>
+svendsk_program : SVENDSK ID
+                  variabel_liste
+                  FELT_START
+                  variabel_liste saetnings_liste
+                  FELT_STOP
+                ;
+
+variabel_liste  : variabel variabel_liste
+                | /* epsilon */
+                ;
+
+variabel        : VAR_ERKLAER
+                ;
+
+saetnings_liste : saetning saetnings_liste
+                | /* epsilon */
+                ;
+
+saetning        : ID '=' udtryk
+                | variabel
+                | HVIS '(' udtryk ')' saetning ellers_del
+                | loop_tal '{' saetnings_liste '}' loop_type
+                | FELT_START saetnings_liste FELT_STOP
+                | AFBRYD
+                | NYLINIE
+                | TABULATOR
+                | SKRIV '(' skriv_indhliste ')'
+                | LAES '(' ID ')'
+                ;
+
+ellers_del      : ELLERS saetning
+                | /* epsilon */
+                ;
+
+loop_tal        : TAL
+                | ID
+                ;
+
+loop_type       : '+'
+                | '-'
+                | TAL loop_plus_minus
+                | ID loop_plus_minus
+                ;
+
+loop_plus_minus : '+'
+                | '-'
+                ;
+
+skriv_indhliste : skriv_indh skriv_indhliste
+                | /* epsilon */
+                ;
+
+skriv_indh      : '[' udtryk ']'
+                | LOVLIG_TEKST
+                ;
+
+udtryk          : udtryk '+' udtryk
+                | udtryk '-' udtryk
+                | udtryk '*' udtryk
+                | udtryk '/' udtryk
+                | '-' udtryk
+                | '(' udtryk ')'
+                | udtryk '&lt;' udtryk
+                | udtryk '&gt;' udtryk
+                | udtryk '=' udtryk
+                | udtryk IKKELIG udtryk
+                | udtryk STOERRELIG udtryk
+                | udtryk MINDRELIG udtryk
+                | udtryk OG udtryk
+                | udtryk ELLER udtryk
+                | IKKE '(' udtryk ')'
+                | SAND
+                | FALSK
+                | ID
+                | TAL
+                | ITERATION
+                ;
+</pre>
+
+
+</body>
+</html>

@@ -11,10 +11,10 @@ In no specific order the projects below are more or less a full list of all thes
 
 * [ConquerCam](http://www.conquercam.com)
 * [FontLister](http://www.fontlister.com)
-* [FillOut Manager](http://theill.com/fillout/)
-* [FontSelector](http://theill.com/fs/)
-* [HTML Font Colorizer](http://theill.com/hfc/)
-* [RGB Color Box](http://theill.com/rcb/)
+* [FillOut Manager](/legacy/FillOutManager.pdf)
+* [FontSelector](/legacy/FontSelector.pdf)
+* [HTML Font Colorizer](/legacy/HTMLFontColorizer.pdf)
+* [RGB Color Box](/legacy/RGBColorBox.pdf)
 * [Slingshot](https://github.com/theill/slingshot)
 * [Bucket!](https://github.com/theill/bucket)
 
@@ -52,7 +52,7 @@ In no specific order the projects below are more or less a full list of all thes
 ### Ruby On Rails Sites
 
 * [BilledID](https://github.com/theill/billedid)
-* [Hurtig Moms](http://hurtigmoms.heroku.com/)
+* [Hurtig Moms](http://hurtigmoms.herokuapp.com/)
 * [ShoutSMS](http://shoutsms.commanigy.com/)
 * [Observer](http://observerq.com/)
 * [LIFESTYLEapps](http://lifestyleapps.com/)
@@ -60,7 +60,7 @@ In no specific order the projects below are more or less a full list of all thes
 
 ### Java Applet Components
 
-* [SwatchITime](http://www.theill.com/java/SwatchITime.java.txt)
+* [SwatchITime](https://gist.github.com/theill/dcd08a0aae14693fb49f)
 
 
 ### Delphi Components
@@ -70,18 +70,12 @@ In no specific order the projects below are more or less a full list of all thes
 
 ### Programming Languages
 
-* Svendsk
+* [Svendsk](/legacy/svendsk/default.html)
 
 
-### Danish Web Sites (without source)
+### Web Sites (without source)
 
-* Danmarks Dårligste Reklamer
+* [Danmarks Dårligste Reklamer](/legacy/DanmarksDaarligsteReklamer.pdf)
 * Kom med din mening
-* [Almen Viden](http://www.theill.com/almenviden.dk/)
-
-
-### Other Web Sites
-
-* Mental disturbance Inc.
-
-
+* [Almen Viden](/legacy/AlmenViden.pdf)
+* [Mental disturbance Inc.](/legacy/MentalDisturbance.pdf)

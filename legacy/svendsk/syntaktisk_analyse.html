@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link REL="STYLESHEET" TYPE="text/css" HREF="tekster.css">
+ <title>Svendsk - Syntaktisk analyse</title>
+<link rel="stylesheet" type="text/css" href="../css/theill.css">
+</head>
+
+<body LINK="#0000FF" BGCOLOR="#FFFFFF" TEXT="#000000" VLINK="#800080" ALINK="#FF0000">
+
+<h1>Syntaktisk analyse</h1>
+I den leksikalske analyse, scannede vi source-koden igennem, og fandt de forskellige tokens. Det næste skridt, er at finde ud af om de giver mening. Det kan gøres på to måder: Man kan få den leksikalske analyse til at generere en fil (symbol-tabel), med alle de tokens der forekommer i programmet. Udfra denne fil, udfører man så den syntaktiske analyse. Den anden metode går ud på, at man udfører den leksikalske og den syntaktiske analyse sideløbende. Det er denne metode FLEX og BISON benytter sig af. Hver gang den leksikalske analyse finder et token, giver den det videre til den syntaktiske, ét token af gangen.<br>
+
+<br>
+
+Når man parser, opbygger man noget, der hedder et <i>parse-træ.</i> Dette træ repræsenterer et stykke kode, skrevet inden for en given grammatik. Bladene i et parse-træ er terminaler, og over dem ligger der non-terminaler. Jo højere man går op i træet, jo længere væk abstraherer man fra terminalerne. Når man går fra bunden af parse-træet til toppen, <i>reducerer </i>man. Omvendt <i>deriverer </i>man, når man går fra toppen af parse-træet og nedad. En derivation er med andre ord de terminaler og non-terminaler, en non-terminal kan afledes til.<br>
+
+<br>
+
+Det der står længst til venstre i parse-træet, svarer til det der står længst til venstre i grammatikkens derivation, og omvendt er det der i træet står længst til højre ækvivalent med det der står længst til højre i grammatikkens derivation. Dette afføder mulighed for, at bestemme hvilken vej man skal læse derivationen, nemlig <i>leftmost</i> eller <i>rightmost</i>. Som navnene siger, opløser leftmost derivationen fra venstre mod højre, mens rightmost omvendt opløser derivationen fra højre mod venstre. (Se side 39-40 i J. P. Bennetts bog).<br>
+
+<br>
+
+Der findes to generelle måder at parse på, nemlig <i>Top-down-</i> og <i>Bottom-up-parsing</i>. Disse to teknikker er (som navnene svagt antyder) diametrale modsætninger.<br>
+
+<br>
+<br>
+
+<h2>Top-down-parsing</h2>
+Med denne teknik starter man øverst i parse-træet, og udarbejder derfra den rigtige struktur, der passer til koden. Ud fra grammatikken forsøger man at udlede det kode, man kompilerer. Hvis det kan lade sig gøre, er koden korrekt i forhold til grammatikken.<br>
+<br>
+<i>Eksempel:</i><br>
+<br>
+Grammatik:<br>
+<pre>
+  S -&gt; TUd
+  T -&gt; a
+  U -&gt; b
+</pre>
+
+Parsetræ:<br>
+<pre>
+  S  -&gt;  S  -&gt;  S
+ /|\    /|\    /|\
+T U d  T U d  T U d
+       |      | |
+       a      a b
+
+  S -&gt; abd
+</pre>
+
+<br>
+
+<h2>Bottom-up-parsing</h2>
+
+I modsætning til top-down parsing, starter man her fra bunden, og reducerer de forskellige terminaler til non-terminaler indtil man er kommet helt igennem parse-træet.<br>
+<br>
+<i>Eksempel:</i><br>
+<br>
+<pre>
+  S -&gt; TUd
+  T -&gt; a
+  U -&gt; b
+</pre>
+
+Parsetræ:<br>
+<pre>
+                       S
+                      /|\  
+       T      TU     T U |
+       |      ||     | | |
+abd -&gt; abd -&gt; abd -&gt; a b d
+
+  S -&gt; abd
+</pre>
+
+For både Top-down- og Bottom-up-parsing gælder der en række <i>Design-kriterier:</i><br>
+<br>
+
+<ol>
+ <li>Tiden spiller selvfølgelig ind. Den tid det tager at parse, skal være proportional med den mængde kode der parses.</li>
+ <br>
+ <li>Det skal være muligt at generere parse-træet ud fra et på forhånd defineret størrelse Lookahead, der altså ikke må være vilkårlig. (Se mere om lookahead senere i dokumentet)</li>
+ <br>
+ <li>Backtracking (muligheden for at fortryde semantiske aktioner) skal undgås. Dette bruges, hvis man har lavet en tvetydig grammatik, og den første mulighed ikke var rigtig. Backtracking bruges sjældent, eftersom det er tidskrævende at bruge, da det skal forsøge sig meget frem. Derudover kan det være besværligt at implementere.</li>
+</ol>
+
+<br>
+Der findes eksempler på top-down-parsere og bottom-up-parsere, der kan opfattes som en slags familie af parsere. Her tænker vi på <i>Predictive Recursive Descent</i> og <i>Shift-Reduce</i> parsere. De første er top-down baseret, mens de andre er baseret på bottom-up.<br>
+
+<br>
+<br>
+
+<h2>Klassificering</h2>
+Der findes tre parametre der er kendetegnende for, hvilken type parser man har med at gøre:<br>
+<br>
+<ol>
+ <li>Den <i>retning</i>, hvorved man læser source-programmet fra. Hvis man læser fra venstre er det <i>L</i> og fra højre <i>R</i>. Der vil næsten altid læses fra venstre mod højre (L), da det er det mest logiske. De fleste filer er i øvrigt nemmest at læse fra venstre (dvs fra starten).</li>
+ <br>
+ <li>Type af <i>derivation</i>, dvs. hvilken side af parse-træet eller grammatikken der først behandles. (leftmost eller rightmost)</li>
+ <br>
+ <li>Hvor mange tokens man skal kunne læse frem, når man står ved et token, for at generere parse-træet. Dette begreb kaldes for <i>lookahead</i>.</li>
+</ol>
+
+<br>
+Dette er der lavet en notationsform for, hvor man skriver <i>retningen</i>, <i>derivationen</i> og til sidst <i>lookahead</i> i parenteser.<br>
+<br>
+Parseren <i>LR(1)</i> er således en parser der læser sourcen fra venstre mod højre (L&#146;et), benytter rightmost derivation (R&#146;et), og højst kræver et token lookahead under parsing (1-tallet). Dette (LR(k)) er en parser, af den før omtalte <i>Shift-Reduce</i> type.<br>
+<br>
+<table WIDTH="100%" BORDER="1" CELLSPACING="0" CELLPADDING="7" BORDERCOLOR="#000000">
+<tr>
+ <td ALIGN="CENTER" VALIGN="TOP"><a HREF="grafik/fig6_3.gif" TARGET="_self"><img SRC="grafik/fig6_3.gif" WIDTH="440" BORDER="0" ALT="Figur 6.3 (27 kb)"></td>
+</tr>
+
+<tr>
+ <td ALIGN="RIGHT" VALIGN="TOP" BGCOLOR="#000000"><font COLOR="White" SIZE="1"><b>Figur 6-3: LR shift-reduce parser</b></font></td>
+</tr>
+</table>
+
+<br>
+Der findes ydermere tre meget brugte forskellige typer inden for denne familie (hvis man ser bort fra størrelsen på lookahead):<br>
+<br>
+<table WIDTH="100%" BORDER="1" CELLSPACING="0" CELLPADDING="4" BORDERCOLOR="#000000">
+<tr>
+ <td WIDTH="45%" VALIGN="TOP" BGCOLOR="#000000"><font COLOR="White" SIZE="2"><b>Parse-type</b></font></td>
+ <td WIDTH="55%" VALIGN="TOP" BGCOLOR="#000000"><font COLOR="White" SIZE="2"><b>Forkortelse</b></font></td>
+</tr>
+
+<tr>
+ <td WIDTH="45%" VALIGN="TOP"><font SIZE="2"><i>Canoncial</i> LR(k)</font></td>
+ <td WIDTH="55%" VALIGN="TOP"><font SIZE="2">LR(k)</font></td>
+</tr>
+
+<tr BGCOLOR="#F0F0F0">
+ <td WIDTH="45%" VALIGN="TOP"><font SIZE="2"><i>Lookahead</i> LR(k)</font></td>
+ <td WIDTH="55%" VALIGN="TOP"><font SIZE="2">LALR(k)</font></td>
+</tr>
+
+<tr>
+ <td WIDTH="45%" VALIGN="TOP"><font SIZE="2"><i>Simple</i> LR(k)</font></td>
+ <td WIDTH="55%" VALIGN="TOP"><font SIZE="2">SLR(k)</font></td>
+</tr>
+</table>
+
+<br>
+LR(k) er den mest komplicerede af disse tre, dvs. har de største tabeller, mens SLR(k) er den mest simple. Den mellemliggende LALR(k) er velegnet til de fleste sprog, da dens tabeller tager højde for de mest almindelige konstruktioner.<br>
+
+<br>
+BISON benytter i øvrigt Lookahead LR(k), med et token lookahead (LALR(1)), og det er faktisk også det, den genererer til compileren.<br>
+
+<br>
+Med hensyn til BISON, stødte vi ind i en del besværligheder, da vi ikke kendte til dens spidsfindigheder. Som eksempel kan nævnes, at hvis man starter med en C-linie (dvs. en linie omgivet af { og }) i definitionen af en non-terminal, får sætningen automatisk en lavere prioritering. Se nedenstående for eksemplificering:<br>
+
+<br>
+
+<table WIDTH="100%" BORDER="1" CELLSPACING="0" CELLPADDING="7" BORDERCOLOR="#000000">
+<tr>
+ <td>
+ <pre>
+ saetning        : {printf(&quot;(tildeling)\n&quot;);} ID '=' udtryk
+                 | ID '(' udtryk ')'
+                 | VAR_ERKLAER
+                 ;</pre></td>
+</tr>
+
+<tr>
+ <td ALIGN="RIGHT" VALIGN="TOP" BGCOLOR="#000000"><font COLOR="White" SIZE="1"><b>Eksempel 6-1: Uddrag af tidlig version af <font FACE="Courier New">saetning</font>-grammatik</b></font></td>
+</tr>
+</table>
+
+<br>
+Dette er ikke noget problem i sig selv, da C-linien i eksemplet ikke har nogen betydning. Det er bare sådan en regel, der gør det besværligt at finde fejl, da det ikke er videre logisk og ikke bliver beskrevet i vores bog.<br>
+
+</body>
+</html>

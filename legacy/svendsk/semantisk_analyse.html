@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link REL="STYLESHEET" TYPE="text/css" HREF="tekster.css">
+ <title>Svendsk - Semantisk analyse</title>
+<link rel="stylesheet" type="text/css" href="../css/theill.css">
+</head>
+
+<body LINK="#0000FF" BGCOLOR="#FFFFFF" TEXT="#000000" VLINK="#800080" ALINK="#FF0000">
+
+<h1>Semantisk analyse</h1>
+Når den leksikalske og den syntaktiske analyse har parset koden igennem, mangler der stadig at blive lavet forskellige checks. Det gælder bl.a., om de typer man har erklæret bliver brugt lovligt; om man fx erklærer variabler før man bruger dem. Denne sematiske analyse bliver ofte skrevet sammen med den syntaktiske analyse, da de to ligger forholdsvis tæt op af hinanden. Den semantiske analyse udgør den sidste del af compilerens front-end.<br>
+
+<br>
+<br>
+<h2>Type-check</h2>
+Det skal undersøges, om variablerne bliver brugt i overensstemmelse med type-reglerne. Det kan fx være om man forsøger, at tildele en tekst-streng til en heltalsvariabel, hvilket ikke er lovligt.<br>
+
+<br>
+Under type-check kunne man også have deklarationscheck, hvilket skal forhindre at man får lov til at bruge en variabel, før man erklærer den.<br>
+
+<br>
+I mange sprog er det muligt at lave type-konvertering, fx kunne det være funktioner, der konverterede en type til integer. Det kan også være automatisk konvertering, som når resultatet af et heltal divideret med et decimaltal bliver et decimaltal. I Svendsk er dette egentlig ikke inkluderet, men Java compileren sørger for det, hvorfor vi ikke vil beskæftige os mere med det.<br>
+
+<br>
+<br>
+<h2>Implementering</h2>
+Når man implementerer typecheck er der to måder at gøre dette på, nemlig statisk og dynamisk. Hvis det er statisk, foregår checket under kompilerings-tidspunktet, mens dynamisk type-check foregår under runtime (mens programmet kører). Eftersom vores Svendsk-compiler ikke genererer eksekverbar kode, er dette ikke aktuelt.<br>
+
+<br>
+Udover det ovenstående, er der i den semantiske analyse også <i>flow of control </i>check. Det er her det undersøges, om forskellige elementer i koden er i den rette kontekst. Fx må en <font FACE="Courier New">afbryd()</font> eller <font FACE="Courier New">ITERATION</font> ikke stå andre steder end i en løkke.<br>
+
+</body>
+</html>

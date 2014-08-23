@@ -1,0 +1,69 @@
+BODY {
+		font-family: verdana, sans-serif;
+		font-size: 10pt;
+		color: #000000;
+		text-transform: none;
+		text-decoration: none;
+		text-align: justify;
+		background-color: #fff;
+}
+
+H1 {
+		font-family: verdana, sans-serif;
+		font-size: 14pt;
+		font-weight: bold;
+		color: #000000;
+		text-align: left;
+}
+
+H2 {
+		font-family: verdana, sans-serif;
+		font-size: 12pt;
+		font-weight: bold;
+		font-style: none;
+		color: #000000;
+		text-align: left;
+}
+
+PRE {
+		font-family: lucida console, courier new, monospace;
+		font-size: 10pt;
+}
+
+.MenuHeading {
+		font-family: verdana, sans-serif;
+		font-size: 8pt;
+		font-weight: bold;
+		color: #000000;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: justify;
+
+}
+
+
+.MenuHeadingSmallCaps {
+		font-family: verdana, sans-serif;
+		font-size: 7pt;
+		font-weight: bold;
+		color: #000000;
+		text-transform: lowercase;
+		text-decoration: none;
+		text-align: justify;
+
+}
+
+.DelHeading {
+		font-family: verdana, sans-serif;
+		font-size: 102pt;
+		font-weight: bold;
+		color: #000000;
+}
+
+A:Link {
+		text-decoration: none;
+}
+
+A:Hover {
+		color: #6495ED;
+}

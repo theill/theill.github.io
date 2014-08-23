@@ -1,0 +1,61 @@
+Nedenst†ende er en log over forskellige problemer vi st›dte ind i samt v‘sent-
+lige ‘ndringer i grammatikken.
+
+PS: Dato er angivet i dag-mdr-†r
+
+- [ SVENDSK ] -----------------------------------------------------------------
+
+ 270598
+  - F›rste .net-version uploades!
+
+
+- [ FLEX ] --------------------------------------------------------------------
+
+ 180598
+  - afpudsning af koden
+
+ 150598
+  - ingen ‘ndringer
+
+ 140598
+  + tilf›jet 'streng'
+  + tilf›jet 'laes'
+
+ 070598
+  + kantede parenteser tilf›jet
+  - 'skriv' ‘ndret. " starter og slutter en tekst-linie
+  + OG, ELLER og IKKE tilf›jet
+
+ 050598
+  ! 'kommentar' definition rettet
+  ! Jubiiii :) Vi har fundet vores '(' fejl. 'tegn' skulle rykkes ned i
+    prioriteringen.
+    
+ 010598
+  - redefinering af 'var_erklaer'
+
+- [ BISON ] -------------------------------------------------------------------
+
+ 180598
+  - afpudsning af rutiner
+
+ 150598
+  - diverse sm†-‘ndringer
+
+ 140598
+  + 'streng' typen tilf›jet
+  
+ 130598
+  + 'laes' s‘tningen tilf›jet
+
+ 070598
+  ! 'skriv_indh' rettet - un›digt loop fjernet
+
+ 010598
+  ! 'saetning' rettet - 'VAR_ERKLAER' defineret forkert
+
+ 300498
+  ! 'parameter-liste' reglen rettet
+
+ 290498
+  + f›rste k›rbare version

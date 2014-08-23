@@ -1,0 +1,459 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link REL="STYLESHEET" TYPE="text/css" HREF="tekster.css">
+ <title>Svendsk - Designovervejelser</title>
+<link rel="stylesheet" type="text/css" href="../css/theill.css">
+</head>
+
+<body LINK="#0000FF" BGCOLOR="#FFFFFF" TEXT="#000000" VLINK="#800080" ALINK="#FF0000">
+
+<h1>Designovervejelser</h1>
+
+Det kræver utrolig meget overvejelse at lave sit eget programmerings-sprog fra bunden. Efter vi i projektgrundlaget og problemformuleringen har fundet ud af <b>hvem</b> der skal bruge det, <b>hvordan</b> det skal bruges, og <b>hvad</b> det skal compilere til, kan man gå igang med at overveje, hvilken syntaks det skal have.<br>
+<br>
+I det følgende har vi nedskrevet vores designovervejelser nøje, da vi mener en gennemarbejdet syntaks er nøglen til et let anvendeligt sprog. Beskrivelserne kan med fordel sammenholdes scanneren <font FACE="Courier New">svendsk.l</font>, da vi de fleste steder skriver det regulære udtryk for det valgte token.<br>
+<br>
+Svendsk er et dansk sprog, og allerede det kan give en del problemer. Er det muligt at bruge æ, ø og å? Skal alle reserverede ord skrives på dansk? Skal decimaler deles med komma, eller med punktum som det er kutyme i lande som USA og England?<br>
+<br>
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr>
+ <td WIDTH="48%" VALIGN="MIDDLE"><b>mellemrum</b></td>
+ <td WIDTH="52%" VALIGN="MIDDLE"><font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">[ \t]+</font></td>
+</tr>
+</table>
+<br>
+Når et Svendsk-program læses igennem, bliver alle mellemrum ignoreret. Et mellemrum er defineret som værende et almindeligt mellemrums-tegn eller et tabulator-tegn.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr>
+ <td WIDTH="48%" VALIGN="MIDDLE"><b>ascii_tegn</b></td>
+ <td WIDTH="52%" VALIGN="MIDDLE"><font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">[^\&quot;\n]</font></td>
+</tr>
+</table>
+<br>
+Et ASCII-tegn er defineret som værende <b>alle</b> tegn med undtagelse af anførelses-tegn og det C-kendte newline-tegn, dvs. et backslash efterfulgt af tegnet 'n'.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>escape_tegn</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">\\\&quot;|\\n</font></td>
+</tr>
+</table>
+<br>
+Et Escape-tegn er et backslash efterfulgt af <b>enten</b> et anførelses-tegn <b>eller</b> tegnet 'n', jvf. beskrivelsen af
+<font FACE="Courier New">ascii_tegn</font>.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>lovlig_tekst</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">\&quot;({ascii_tegn}|{escape_tegn})*\&quot;</font></td>
+</tr>
+</table>
+<br>
+En lovlig tekst-streng startes med et anførelses-tegn. Herefter kommer et vilkårligt antal af <font FACE="Courier New">ascii_tegn</font> eller <font FACE="Courier New">escape_tegn</font>. Strengen <i>skal</i> afsluttes med endnu et anførelses-tegn.<br>
+<br>
+<font FACE="Courier New">lovlig_tekst</font> bruges udelukkende i en <font FACE="Courier New">skriv</font>-sætning.<br>
+<br>
+Eksempler på forekomster af <font FACE="Courier New">lovlig_tekst</font> kunne være:<br>
+<br>
+<pre>
+&quot;Svendsk: En Svendsk til Java-compiler\n&quot;
+&quot;Navnet er \&quot;Svend\&quot;.&quot;
+&quot;kr.\t200,-\nkr.\t300,-\n&quot;
+</pre>
+Se yderligere beskrivelsen af <font FACE="Courier New">skriv</font>.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>bogstav</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">[A-Za-z]</font></td>
+</tr>
+</table>
+<br>
+I Svendsk er et lovligt bogstav et tegn fra A til Z og fra a til z, dvs det er <i>ikke</i> muligt at skrive de danske bogstaver æ, ø og å. Det har vi besluttet, for at undgå de problemer det ville give, med forskellige tegn-tabeller, fx har Windows og DOS ikke den samme tegn-tabel.<br>
+<br>
+&nbsp;&nbsp;At det kun er A-Z og a-z er dog en sandhed med modifikationer, for i en <font FACE="Courier New">skriv</font>-sætning er det muligt at skrive en del flere tegn. Læs yderligere beskrivelsen af <font FACE="Courier New">skriv</font>. Et bogstav bliver ikke i sig selv brugt som et token, men dets definition bruges i fx beskrivelsen af en identifikator (id).<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>ciffer</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">[0-9]</font></td>
+</tr>
+</table>
+<br>
+Et ciffer er simpelthen bare defineret som et tegn mellem 0 og 9; begge inklusive.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>kommentar</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">&quot;;&gt;&quot;([^&lt;]|&quot;&lt;&quot;[^;])*&quot;&lt;;&quot;</font></td>
+</tr>
+</table>
+<br>
+Vi kiggede på nogle kendte sprog (C, Pascal og Basic), for at finde en hensigtsmæssig syntaks for kommentarer. Vi bestemte, at en kommentar skal <i>starte </i>med to tegn, da vi mener dette formindsker risikoen for, at man tilfældigt skriver utilsigtede kommentarer. Da vi syntes fint om '<font FACE="Courier New">;</font>' som det første tegn, var det nærliggende at bruge '<font FACE="Courier New">&gt;</font>', for at symbolisere at vi starter kommentaren.<br>
+<br>
+En kommentar, der i øvrigt kan strække sig over flere linier, afsluttes med det omvendte, nemlig '<font FACE="Courier New">&lt;;</font>'. Inspirationen stammer fra sproget C, der henholdsvis bruger '<font FACE="Courier New">/*</font>' og '<font FACE="Courier New">*/</font>'.<br>
+<br>
+Det er ikke muligt at have kommentarer inde i kommentarer. Dette ville have været praktisk, hvis man ville udkommentere et stykke kode, der i forvejen <i>var</i> kommenteret. Modsat kan det skabe unødvendig forvirring for programmøren, da han så også skal holde øje med virkefelter (scopes) i sine egne kommentarer.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>id (identifikator)</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">{bogstav}({bogstav}|{ciffer}|_)*</font></td>
+</tr>
+</table>
+<br>
+En identifikator <i>skal</i> starte med et stort eller et lille bogstav fra A til Z. Efterfølgende tegn kan være bogstaver (A-Z eller a-z), cifre (0-9) eller understregning (_). Der er ingen begrænsninger på længden af en identifikator.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>tal</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">-?[1-9]{ciffer}*|0</font></td>
+</tr>
+</table>
+<br>
+Et tal må ikke <i>starte</i> med tegnet nul (0), medmindre hele tallet <i>er</i> nul. Derudover må der ikke være mere end ét minustegn ('-') i et tal. Efterfølgende tegn skal være cifre mellem 0 og 9.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="48%" VALIGN="MIDDLE">
+<b>var_erklaer (Variabelerklæring)</b></font></td>
+<td WIDTH="52%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">{id}\.({typer})&quot;()&quot;</font></td>
+</tr>
+</table>
+<br>
+En erklæring af en variabel består af fire dele: et id, et <b>.</b> (punktum), en type og til sidst <b>()</b> (to parenteser). En variabelerklæring for et heltal <font FACE="Courier New">i</font> ville derfor se således ud:<br>
+<br>
+<font FACE="Courier New">&nbsp;&nbsp;i.heltal()</font><br>
+<br>
+Det er ikke tilladt at have nogle mellemrum (whitespaces) mellem disse fire dele.<br>
+&nbsp;&nbsp;I vores definition er det ikke muligt at erklære flere variabler, som man ellers kan i Java, ved at skrive:<br>
+<br>
+<font FACE="Courier New">&nbsp;&nbsp;int i, j;</font><br>
+<br>
+Vi mente, det ville være forvirrende for nybegyndere.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="30%" VALIGN="TOP">
+<b>Løkke</b></font></td>
+<td WIDTH="70%" VALIGN="TOP">&nbsp;</td>
+</tr>
+</table>
+<br>
+I Svendsk skrives løkker på en noget anderledes måde, end det er kendt i andre programmerings-sprog. Som eksempel kan gives en løkke, der lægger tallene fra 1 til 10 sammen i en variabel. Læg specielt mærke til det reserverede ord <font FACE="Courier New"><b>ITERATION</b></font> der indeholder det aktuelle gennemløbsnummer (dvs. i nedenstående eksempel er det fra 1 til og med 10):<br>
+<br>
+<pre>
+  a.heltal()
+
+  1{ a = a + ITERATION }10+
+</pre>
+
+Det tilsvarende kode, programmeret i Java, kunne således være:<br>
+<br>
+<pre>
+  int a = 0;
+
+  for(int i=1; i&lt;=10; i++)
+    a += i;
+</pre>
+
+eller skrevet mere kompakt:<br>
+<br>
+<pre>
+  int a = 0;
+
+  for(int i=1; i=&lt;10; a += i++) ;
+</pre>
+
+Vi har dog valgt at generere Java-koden v.h.a. en <font FACE="Courier New">do...while</font> løkke. Dette er udelukkende gjort, for at lette kode-genereringen for os selv, grundet at vi først kender løkkens grænse når vi har læst (og genereret kode til) løkkens 'interne' sætninger.<br>
+<br>
+Java-koden vil derfor komme til at se ud som følgende:<br>
+<br>
+<pre>
+  int a = 0;
+  int loop0 = 1;
+
+  do
+  {
+    a = a + loop0;
+    loop++;
+  }
+  while(loop0 &lt;= 10);
+</pre>
+
+I Svendsk ser et skelet for løkker med grænser således ud:<br>
+<br>
+<font FACE="Courier New">
+<b>startværdi<br>
+{</b><br>
+&nbsp;&nbsp;<i>sætning(er)</i><br>
+<b>}<br>
+slutværdi</b> [<b>+</b>|<b>-</b>]<br>
+</font>
+<br>
+Det skal nævnes, at begge værdier (startværdi og slutværdi) både kan være <font FACE="Courier New">tal</font> (se beskrivelse andetsteds) og variabler af typen <font FACE="Courier New">heltal()</font>.<br>
+<br>
+Det er også muligt at lave en løkke uden øvre grænse, fx:<br>
+<br>
+<font FACE="Courier New">
+&nbsp;&nbsp;a.heltal()<br>
+&nbsp;&nbsp;1{ a = a + ITERATION }+<br>
+</font>
+<br>
+Ovenstående løkke vil køre, indtil den specifikt bliver stoppet af en <font FACE="Courier New">afbryd()</font>-statement. Hvis man vil opnå samme effekt som forrige eksempel, skal løkken derfor udvides med en <font FACE="Courier New">hvis</font>-sætning:<br>
+<br>
+<pre>
+  a.heltal()
+  1{
+
+    a = a + ITERATION
+    hvis ( ITERATION = 11)
+      afbryd()
+  }+
+</pre>
+
+Sidste variant er en løkke uden nedre grænse:<br>
+<br>
+
+<font FACE="Courier New">
+&nbsp;&nbsp;a.heltal()<br>
+<br>
+&nbsp;&nbsp;1{ a = a + ITERATION }-<br>
+</font>
+<br>
+Der er således fire forskellige løkke-strukturer i Svendsk, hvilket nedenstående tabel tydeliggør.<br>
+
+<br>
+<br>
+
+<table BORDER="1" CELLSPACING="0" CELLPADDING="7" WIDTH="100%" BORDERCOLOR="Black">
+<tr>
+ <td WIDTH="50%" VALIGN="TOP"><font FACE="Courier New"><p>startværdi <b>{</p>
+</b><p>  <i>sætning(er)</p>
+</i><b><p>}</b>slutværdi <b>+</b></font></td>
+<td WIDTH="50%" VALIGN="TOP">
+<font FACE="Courier New"><p>startværdi <b>{</p>
+</b><p>  <i>sætning(er)</p>
+</i><b><p>}</b>slutværdi <b>-</b></font></td>
+</tr>
+<tr><td WIDTH="50%" VALIGN="TOP">
+<font SIZE="2">Gentages fra <i>startværdi</i> til <i>slutværdi</i>. Tælleren adderes med en (1) efter hvert gennemløb.</font></td>
+<td WIDTH="50%" VALIGN="TOP">
+<font SIZE="2">Gentages fra <i>startværdi</i> til <i>slutværdi</i>. Tælleren subtraheres med en (1) efter hvert gennemløb.</font></td>
+</tr>
+<tr><td WIDTH="50%" VALIGN="TOP">
+<font FACE="Courier New"><p>startværdi <b>{</p>
+</b><p>  <i>sætning(er)</p>
+</i><b><p>}+</b></font></td>
+<td WIDTH="50%" VALIGN="TOP">
+<font FACE="Courier New"><p>startværdi <b>{</p>
+</b><p>  <i>sætning(er)</p>
+</i><b><p>}-</b></font></td>
+</tr>
+<tr><td WIDTH="50%" VALIGN="TOP">
+<font SIZE="2">Gentages fra <i>startværdi</i> til uendeligt. Tælleren adderes med en (1) efter hvert gennemløb. Det er kun muligt at springe ud af løkken med en </font><font FACE="Courier New" SIZE="2">afbryd()</font><font SIZE="2">-statement.</font></td>
+<td WIDTH="50%" VALIGN="TOP">
+<font SIZE="2">Gentages fra <i>startværdi</i> til uendeligt. Tælleren subtraheres med en (1) efter hvert gennemløb. Det er kun muligt at springe ud af løkken med en </font><font FACE="Courier New" SIZE="2">afbryd()</font><font SIZE="2">-statement.</font></td>
+</tr>
+
+<tr>
+ <td ALIGN="RIGHT" VALIGN="TOP" COLSPAN="2" BGCOLOR="#000000"><font COLOR="White" SIZE="1"><b>Tabel 5-1: Løkkestrukturer i Svendsk</b></font></td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="30%" VALIGN="TOP">
+<b>skriv</b></font></td>
+<td WIDTH="70%" VALIGN="MIDDLE">
+<b><font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">skriv(</b>tekst<b>)</b></font></td>
+</tr>
+</table>
+<br>
+<font FACE="Courier New">skriv</font>-sætningen udskriver en tekst på skærmen. Vi ville gerne have den til at se ud på følgende måde:<br>
+<br>
+<font FACE="Courier New">&nbsp;&nbsp;skriv(hvis hundrede piger danser på tyve borde, er der i gennemsnit [100/20] piger på &quot;hvert&quot; bord)</font><br>
+<br>
+Det har desværre ikke været muligt for os at opnå dette. Problemet var, at vi ikke kunne få FLEX til at forstå, at man er igang med en tekst-streng. Den læste de forskellige ord som identifikatorer. Det skulle samtidigt være muligt at skrive et udtryk i kantede parenteser (i eksemplet er det 100/20) et hvilket som helst sted i teksten. Anførelsestegn (<font FACE="Courier New">&quot;</font>) har desuden ingen speciel betydning.<br>
+<br>
+Vi arbejdede lang tid med problemet, men blev desværre nødt til at ty til en, efter vores mening, mere kedelig version af <font FACE="Courier New">skriv</font>-sætningen. Samme eksempel kommer derfor til at se således ud i den endelige version:<br>
+<br>
+<font FACE="Courier New">&nbsp;&nbsp;skriv(&quot;hvis hundrede piger danser på tyve borde, er der i gennemsnit &quot;[100/20]&quot; piger på \&quot;hvert\&quot; bord&quot;)</font><br>
+<br>
+Hvis man skal skrive et udtryk, bliver man først nødt til at afslutte sin tekst-streng med et anførelses tegn. Herefter skrives udtrykket i kantede parenteser, fx <font FACE="Courier New">[ i = 2 ]</font>. Skal der udskrives mere tekst, skal en ny streng startes med anførelses-tegn. Det <b>er</b> muligt at have et anførelses-tegn i sin tekst-streng, men så skal man først skrive et backslash (<font FACE="Courier New">\</font>), dvs. man skal skrive <font FACE="Courier New">\&quot;</font>.<br>
+<br>
+Det er også muligt at skrive flere udtryk i én skriv-sætning, men det kræver at der laves kantede parenteser om hvert udtryk:<br>
+<br>
+<font FACE="Courier New">&nbsp;&nbsp;skriv([8+2] &quot; = &quot; [8+2] &quot; og &quot; [8+2] &quot; * &quot; [10] &quot; = &quot; [(8+2)*10])</font><br>
+<br>
+En ny linie indsættes v.h.a. det C-kendte '<font FACE="Courier New">\n</font>' tegn.<br>
+<br>
+<font FACE="Courier New">&nbsp;&nbsp;skriv(&quot;Linie 1\nLinie 2\nLinie 3&quot;)</font><br>
+<br>
+Den generede Java-kode bruger <font FACE="Courier New">System.out.print()</font> til at udskrive teksten på skærmen. Forrige Svendsk-linie bliver derfor oversat til:<br>
+<br>
+<font FACE="Courier New">&nbsp;&nbsp;System.out.print(&quot;Linie 1\nLinie 2\nLinie 3&quot; + &quot;&quot;);</font><br>
+<br>
+De to sidste anførsels-tegn har ingen betydning for outputtet og er kun medtaget for at lette kode-genereringen.<br>
+<br>
+Se yderligere beskrivelse af tekst-strenge under <font FACE="Courier New">lovlig_tekst</font>.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="30%" VALIGN="MIDDLE">
+<b>Blok</b></font></td>
+<td WIDTH="70%" VALIGN="MIDDLE">
+<b><font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">&gt;&gt;</b> sætninger <b>&lt;&lt;</b></font></td>
+</tr>
+</table>
+<br>
+Blokke kan skrives hvor som helst i Svendsk, men bruges normalt kun til at definere en funktions-krop (ikke implementeret), eller hvis man har brug for at skrive mere end en sætning i en <font FACE="Courier New">hvis-ellers</font>-sætningskonstruktion.<br>
+<br>
+En blok startes med to større-end tegn (<font FACE="Courier New">&gt;&gt;</font>) og afsluttes med to mindre-end tegn (<font FACE="Courier New">&lt;&lt;</font>). Grunden til, at vi valgte disse symboler var, at det giver en god fornemmelse af, at efterfølgende kode skal flyttes enten til højre eller venstre (afh. af <font FACE="Courier New">&gt;&gt;</font> og <font FACE="Courier New">&lt;&lt;</font>). Brugere af Svendsk har som sagt intet, eller meget lidt, kendskab til programmering, så ved at give dem fornemmelsen af, at en indrykning er nødvendig, håber vi på, at vi samtidigt kan lære dem noget om, at kildekode skal være let-læseligt.<br>
+<br>
+Et eksempel på benyttelse af en blok, kan se sådan ud:<br>
+<br>
+<pre>
+  hvis (SUBeloeb &gt; 2000)
+    skriv(&quot;Du må være udeboende, da din SU er &quot; [SUBeloeb] &quot; kr.&quot;)
+  ellers
+  &gt;&gt;
+    skriv(&quot;Du må bo hjemme, da din SU kun er &quot; [SUBeloeb] &quot; kr.&quot;)
+    hvis (alder &gt; 18)
+      skriv(&quot; Det er okay, du er jo også kun &quot; [alder] &quot; år&quot;)
+    ellers
+      skriv(&quot; Det var ikke meget!&quot;)
+  &lt;&lt;
+</pre>
+
+Vi mener i øvrigt der er stor sammenhæng mellem blokke og kommentarer, da de begge giver indtrykket af noget sammenhængende. Derfor har vi givet dem en syntaks der minder meget om hinanden.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="30%" VALIGN="MIDDLE">
+<b>SvendskInput</b></font></td>
+<td WIDTH="70%" VALIGN="MIDDLE">&nbsp;</td>
+</tr>
+</table>
+<br>
+Hvis man skal have input fra brugeren, skal man i Java først oprette et objekt af typen <font FACE="Courier New">BufferedReader</font>. Vi har valgt at erklære dette objekt globalt, da vi ellers kunne komme ud for, at skulle erklære det flere steder i den genererede kode (grundet scopes).<br>
+<br>
+Java-koden for erklæring af objektet:<br>
+<br>
+<font FACE="Courier New" SIZE="1">
+&nbsp;&nbsp;java.io.BufferedReader SvendskInput;<br>
+&nbsp;&nbsp;SvendskInput = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br>
+</font><br>
+<br>
+Det er nu muligt at arbejde på dette objekt hvert gang vi bruger Svendsk-sætningen <font FACE="Courier New">laes</font>.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="30%" VALIGN="MIDDLE">
+<b>Laes</b></font></td>
+<td WIDTH="70%" VALIGN="MIDDLE">
+<b><font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">laes(</b>id<b>)</b></font></td>
+</tr>
+</table>
+<br>
+Laes-sætningen læser input fra keyboardet. Et input afsluttes med return. Parameteren til laes, er et id, fx:<br>
+<br>
+<pre>
+  str.streng()
+  ...
+  laes(str)
+</pre>
+
+Ovenstående Svendsk lægger indtastningerne ind i variablen <font FACE="Courier New">str</font>.<br>
+<br>
+Den genererede Java-kode bliver:<br>
+<br>
+<pre>
+  try {
+    str = SvendskInput.readLine();
+  }
+  catch(java.io.IOException ioe)
+  { str = &quot;&quot;;}
+</pre>
+
+<font FACE="Courier New">SvendskInput</font> er et reserveret ord, der er beskrevet andetsteds.<br>
+<br>
+Det er kun muligt at lægge input i en variabel af typen <font FACE="Courier New">streng</font>. Andre typer er udeladt grundet tidsmangel.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="46%" VALIGN="MIDDLE">
+<b>Sammenligning</b> og <b>Tildeling</b></font></td>
+<td WIDTH="54%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">=</font></td>
+</tr>
+</table>
+<br>
+Vi mener, mange nybegynder har svært ved at skelne mellem, hvilke(t) tegn der skal bruges i en sammenligning og hvilke(t) tegn der skal bruges i en tildeling. I C, skrives fx <font FACE="Courier New">tal = 2</font> i tildelinger og <font FACE="Courier New">tal == 2</font> i sammenligninger.<br>
+<br>
+Vi har bestemt at bruge det samme tegn (=) i både sammenligninger og tildelinger, da det ud fra kodens kontekst er tydeligt, hvad man mener; fx kan man ikke lave en tildeling i en <font FACE="Courier New">hvis</font>-sætning.<br>
+
+<br>
+<br>
+
+<table CELLSPACING="0" BORDER="0" CELLPADDING="6" WIDTH="100%" BGCOLOR="#F0F0F0">
+<tr><td WIDTH="30%" VALIGN="MIDDLE">
+<b>typer</b></font></td>
+<td WIDTH="70%" VALIGN="MIDDLE">
+<font FACE="Courier New" SIZE="1"><p ALIGN="RIGHT">heltal|boolsk|streng</font></td>
+</tr>
+</table>
+<br>
+I Svendsk er der tre typer: <font FACE="Courier New">heltal</font>, <font FACE="Courier New">boolsk</font> og <font FACE="Courier New">streng</font> der henholdsvis svarer til Javas <font FACE="Courier New">int</font>, <font FACE="Courier New">boolean</font> og <font FACE="Courier New">String</font>. Se <i><a href="definering_af_sproget_svendsk.html">Definering af sproget Svendsk</a></i> for yderligere information om disse typer.<br>
+
+</body>
+</html>

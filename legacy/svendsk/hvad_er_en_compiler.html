@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link REL="STYLESHEET" TYPE="text/css" HREF="tekster.css">
+ <title>Svendsk - Hvad er en compiler?</title>
+<link rel="stylesheet" type="text/css" href="../css/theill.css">
+</head>
+
+<body LINK="#0000FF" BGCOLOR="#FFFFFF" TEXT="#000000" VLINK="#800080" ALINK="#FF0000">
+<h1>Hvad er en compiler?</h1>
+
+En compiler er et stykke software, der oversætter fra et stykke kode skrevet i ét sprog (<i>source language</i>) til et andet (<i>target language</i>).<br>
+<br>
+
+<table WIDTH="100%" BORDER="1" CELLSPACING="0" CELLPADDING="4" BORDERCOLOR="Black">
+<tr BORDERCOLOR="White">
+ <td ALIGN="CENTER" VALIGN="TOP" WIDTH="100%"><a HREF="grafik/fig3_1.gif" TARGET="_self"><img SRC="grafik/fig3_1.gif" BORDER="0" ALT="Figur 3.1 (36 kb)" WIDTH="440"></a></td>
+</tr>
+
+<tr>
+ <td VALIGN="TOP" BGCOLOR="#000000" ALIGN="RIGHT"><font COLOR="White" SIZE="1"><b>Figur 3-1: Blok diagram for en compiler</b></font></td>
+</tr>
+</table>
+
+<br>
+<i>Source language:</i> Det sprog man arbejder med, fx et programmeringssprog som C++ eller Pascal. Dette sprog kan sjældent &quot;forstås&quot; af computeren. I vores tilfælde, skal der oversættes fra sproget Svendsk.<br>
+<br>
+<i>Target language:</i> Det sprog man oversætter til, fx. maskinkode eller assembler. I vores tilfælde bliver der oversat til Java-kode (som derefter skal fortolkes).<br>
+<br>
+Derudover bliver der under oversættelsen produceret diverse errors og warnings. Errors ved fejl og Warnings ved tvetydigheder, dvs. steder hvor source-koden kan betyde to forskellige ting ifølge grammatikken. Hvis det er direkte fejl, dvs. hvis koden ikke giver nogen mening inden for grammatikken, bliver koden ikke oversat. Dette ville ikke give nogen mening, da koden alligevel ikke kan eksekveres. De fleste compilere fortsætter dog oversættelsen, for at se efter andre errors/warnings.<br>
+<br>
+De mest almindelige compilere oversætter til maskinkode eller assembler, og bruges for at lette programmørens opgave. Ydermere nedsættes fejl-procenten, da abstraktions-niveauet bliver højere. Nutildags er det yderst sjældent man programmerer i direkte maskinkode.<br>
+<br>
+<br>
+<h2>Historie</h2>
+Da maskinerne og programmerne blev større, blev de sidstnævnte så komplicerede, at de blev for svære at skrive som binære filer. Derfor valgte man at lægge et niveau over maskinlaget, nemlig maskinkoden. Med dette skridt abstraherede man væk fra maskinens binære opbygning. Derefter kom assembler, som lå på et endnu højere abstraktionsniveau, og i dag har vi højniveau-sprogene, der ligger abstraktionsmæssigt langt fra computerens binære et og nul.<br>
+<br>
+I starten var maskinerne meget betydende for sprogenes opbygning, da de ofte var designet til en bestemt maskine. Dette kunne så give visse begrænsninger for hvad sproget accepterede, fx mht. max dimensioner på et array.<br>
+<br>
+Efterhånden begyndte man at lave sprogene uden at tænke på en bestemt maskine. Man kan sige at sprogene blev mere frigjort fra én bestemt maskine, og det blev nu compilerens opgave at få sprog og maskine til at hænge sammen.<br>
+<br>
+<br>
+<h2>Struktur for compiler</h2>
+En compiler består af en <i>front end </i>og en <i>back end</i>.<br>
+<br>
+<i>Front end </i>sørger for selve analysen af source koden, mht om den er fejlfri og utvetydig. Hvis dette ikke er tilfældet genereres der errors/warnings. Front end består af tre trin:<br>
+<br>
+<ul>
+ <i>
+ <li>leksikalsk analyse</li>
+ <li>syntaktisk analyse</li>
+ <li>semantisk analyse </li>
+ </i>
+</ul>
+
+<i>Back end</i> genererer compilerens kode-output, og består af yderligere to trin:<br>
+<br>
+<ul>
+ <i>
+ <li>kodegenerering</li>
+ <li>kodeoptimering.</li>
+ </i>
+</ul>
+
+Det sidste har vi dog ikke med i vores compiler, hvorfor forklares i kodegenereringen.<br>
+<br>
+<table BORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="100%" BORDERCOLOR="Black">
+<tr BORDERCOLOR="White">
+ <td ALIGN="CENTER" VALIGN="TOP"><a HREF="grafik/fig3_2.gif" TARGET="_self"><img SRC="grafik/fig3_2.gif" WIDTH="440" BORDER="0" ALT="Figur 3.2 (54 kb)"></a></td>
+</tr>
+
+<tr>
+ <td ALIGN="RIGHT" VALIGN="TOP" BGCOLOR="#000000"><font COLOR="White" SIZE="1"><b>Figur 3-2: Struktur for compiler</b></font></td>
+</tr>
+</table>
+
+<br>
+Læs desuden nærmere om de enkelte dele af compileren, i de respektive afsnit.
+
+</body>
+</html>

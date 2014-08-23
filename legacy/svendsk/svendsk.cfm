@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+ <LINK REL="STYLESHEET" TYPE="text/css" HREF="tekster.css">
+ <TITLE>Svendsk - </TITLE>
+</HEAD>
+
+<BODY LINK="#0000FF" BGCOLOR="#FFFFFF" TEXT="#000000" VLINK="#800080" ALINK="#FF0000">
+
+
+
+</BODY>
+</HTML>

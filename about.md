@@ -11,8 +11,8 @@ My name is Peter Theill. I'm a developer and co-founder of [Drivr](http://drivr.
 
 * 2011- : Partner, [Drivr (previously Click A Taxi)](http://drivr.com)
 * 2009-11: Partner, [GoMore](http://gomore.dk)
-* 2008-09: Partner, [Gazebo](http://gzb.dk)
-* 2006-08: Developer, [ZYB](http://zyb.com)
+* 2008-09: Partner, Gazebo
+* 2006-08: Developer, ZYB
 * 2004-06: .NET consultant, [Progressive IT](http://www.progressive.dk)
 * 2001-05: PHP/MySQL consultant, [Digital River](http://www.digitalriver.com)
 * 2002-04: Part-time Software Developer, [Intec Telecom Systems](http://www.intec-telecom-systems.com)
@@ -43,7 +43,7 @@ My name is Peter Theill. I'm a developer and co-founder of [Drivr](http://drivr.
 ### Languages
 
 * Objective-C, C#, Java, C++: Very proficient
-* PHP (3.x, 4.x), Ruby (including Ruby on Rails), Pascal (Turbo- &amp; Delphi variants), Basic (MS- 
+* PHP (3.x, 4.x), Ruby (including Ruby on Rails), Pascal (Turbo- &amp; Delphi variants), Basic (MS-
 &amp; Visual-): Very proficient
 * Perl: Proficient
 * Common LISP, Moscow ML, Ada: Primarily academic use only
