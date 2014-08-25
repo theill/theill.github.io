@@ -71,6 +71,7 @@ My name is Peter Theill. I'm a developer and co-founder of [Drivr](http://drivr.
 
 ### Expertise & Awards
 
+* 2014: Titled Laird of Dunans Castle
 * 2009- : Part of Copenhagen Ruby Brigade
 * 2004-06: Part of the Danish Microsoft Partners Expert Team for Office clients
 * 2006: Received Time Magazine's "[Person of the Year](http://en.wikipedia.org/wiki/You_(Time_Person_of_the_Year))" award
