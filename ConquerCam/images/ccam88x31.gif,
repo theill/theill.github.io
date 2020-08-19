@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<meta http-equiv="refresh" content="0;url=/ConquerCam/images/ccam88x31.gif">
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.location = "/ConquerCam/images/ccam88x31.gif";
+		</script>
+
+		<p>You are being redirected to <a href="/ConquerCam/images/ccam88x31.gif">/ConquerCam/images/ccam88x31.gif</a></p>
+	</body>
+</html>

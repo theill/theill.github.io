@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>microsoft &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/microsoft/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Wed, 17 May 2017 07:19:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>microsoft &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>ShoutSMS updated to latest Rails version</title>
+		<link>/blog/2017/05/17/shoutsms-sms-to-hundreds-of-people/</link>
+					<comments>/blog/2017/05/17/shoutsms-sms-to-hundreds-of-people/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Wed, 17 May 2017 07:19:19 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[bulksms]]></category>
+		<category><![CDATA[commanigy]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[shoutsms]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/work/2017/05/17/shoutsms-sms-to-hundreds-of-people/</guid>
+
+					<description><![CDATA[<p>I just upgraded my ShoutSMS service since Microsoft chose to use it for their Microsoft Inspire event this summer. It&#8217;s a great project allowing people to send out bulk sms using their own phone number. It&#8217;s a nice feature if you want to get immediate feedback on dispatched messages such as follow-up questions or similar.</p>
+<p>The post <a rel="nofollow" href="/blog/2017/05/17/shoutsms-sms-to-hundreds-of-people/">ShoutSMS updated to latest Rails version</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<div class="link_description">
+<p>I just upgraded my <a href="http://shoutsms.commanigy.com/">ShoutSMS</a> service since Microsoft chose to use it for their Microsoft Inspire event this summer.</p>
+<p>It&#8217;s a great project allowing people to send out bulk sms using their own phone number. It&#8217;s a nice feature if you want to get immediate feedback on dispatched messages such as follow-up questions or similar.</p>
+</div>
+<p>The post <a rel="nofollow" href="/blog/2017/05/17/shoutsms-sms-to-hundreds-of-people/">ShoutSMS updated to latest Rails version</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2017/05/17/shoutsms-sms-to-hundreds-of-people/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">4</post-id>	</item>
+	</channel>
+</rss>

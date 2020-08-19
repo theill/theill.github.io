@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Familio pitching	</title>
+	<atom:link href="/blog/2018/05/16/familio-pitching/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/2018/05/16/familio-pitching/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Wed, 16 May 2018 20:17:22 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+	<item>
+		<title>
+		By: Peter		</title>
+		<link>/blog/2018/05/16/familio-pitching/#comment-11681</link>
+
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Wed, 16 May 2018 20:17:22 +0000</pubDate>
+		<guid isPermaLink="false">http://theill.com/blog/2018/05/16/familio-pitching/#comment-11681</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/2018/05/16/familio-pitching/#comment-11675&quot;&gt;Rita Theill&lt;/a&gt;.
+
+Vi fortalte dem om Familio og ser om der kunne være en idee i at faa Familio med i deres fordelsprogram.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/2018/05/16/familio-pitching/#comment-11675">Rita Theill</a>.</p>
+<p>Vi fortalte dem om Familio og ser om der kunne være en idee i at faa Familio med i deres fordelsprogram.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Rita Theill		</title>
+		<link>/blog/2018/05/16/familio-pitching/#comment-11675</link>
+
+		<dc:creator><![CDATA[Rita Theill]]></dc:creator>
+		<pubDate>Wed, 16 May 2018 13:53:27 +0000</pubDate>
+		<guid isPermaLink="false">http://theill.com/blog/2018/05/16/familio-pitching/#comment-11675</guid>
+
+					<description><![CDATA[Har I indgået en aftale med TDC eller er det bare dem som I bruger som udbyder ?]]></description>
+			<content:encoded><![CDATA[<p>Har I indgået en aftale med TDC eller er det bare dem som I bruger som udbyder ?</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

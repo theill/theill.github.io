@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<meta http-equiv="refresh" content="0;url=/fillout-manager/fom-tutorial.txt">
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.location = "/fillout-manager/fom-tutorial.txt";
+		</script>
+
+		<p>You are being redirected to <a href="/fillout-manager/fom-tutorial.txt">/fillout-manager/fom-tutorial.txt</a></p>
+	</body>
+</html>

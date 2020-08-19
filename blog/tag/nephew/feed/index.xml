@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>nephew &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/nephew/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Mon, 10 Jul 2017 00:20:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>nephew &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>WWF with Oliver at Royal Arena</title>
+		<link>/blog/2017/05/14/wwf-oliver-royal-arena/</link>
+					<comments>/blog/2017/05/14/wwf-oliver-royal-arena/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Sun, 14 May 2017 15:22:18 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[nephew]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/2017/05/14/at-royal-arena-view-on-path/</guid>
+
+					<description><![CDATA[<p>Watching some WWF at Royal Arena with Oliver</p>
+<p>The post <a rel="nofollow" href="/blog/2017/05/14/wwf-oliver-royal-arena/">WWF with Oliver at Royal Arena</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><img class="alignnone size-full wp-image-5" src="https://i1.wp.com/68.media.tumblr.com/60cd8bc3dd9ace15377aeb5fc209aaf3/tumblr_opydl6koIY1qz94hmo1_1280.jpg?w=660" alt="" data-recalc-dims="1" /></p>
+<p>Watching some WWF at Royal Arena with Oliver</p>
+<p>The post <a rel="nofollow" href="/blog/2017/05/14/wwf-oliver-royal-arena/">WWF with Oliver at Royal Arena</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2017/05/14/wwf-oliver-royal-arena/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1150</post-id>	</item>
+	</channel>
+</rss>

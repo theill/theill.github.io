@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>company &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/company/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Sun, 10 Sep 2017 20:01:21 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>company &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>Drivr is shutting down</title>
+		<link>/blog/2017/05/10/drivr-is-shutting-down/</link>
+					<comments>/blog/2017/05/10/drivr-is-shutting-down/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Wed, 10 May 2017 07:08:38 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[company]]></category>
+		<category><![CDATA[drivr]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/work/2017/05/10/drivr-is-shutting-down/</guid>
+
+					<description><![CDATA[<p>Today we had to close down operations at Drivr &#8211; a company I have been working on for almost six years. It&#8217;s sad but have been a fun ride. Built a lot of great tech and had a bunch of excellent colleagues.</p>
+<p>The post <a rel="nofollow" href="/blog/2017/05/10/drivr-is-shutting-down/">Drivr is shutting down</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Today we had to close down operations at <a href="https://goo.gl/38okJX">Drivr</a> &#8211; a company I have been working on for almost six years.</p>
+<p>It&#8217;s sad but have been a fun ride. Built a lot of great tech and had a bunch of excellent colleagues.</p>
+<p>The post <a rel="nofollow" href="/blog/2017/05/10/drivr-is-shutting-down/">Drivr is shutting down</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2017/05/10/drivr-is-shutting-down/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">6</post-id>	</item>
+	</channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>dinner &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/dinner/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Fri, 21 Jul 2017 01:56:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>dinner &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>Dinner at Washington friends</title>
+		<link>/blog/2017/07/17/dinner-washington-friends/</link>
+					<comments>/blog/2017/07/17/dinner-washington-friends/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Mon, 17 Jul 2017 02:41:26 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[dinner]]></category>
+		<category><![CDATA[friends]]></category>
+		<category><![CDATA[vacation]]></category>
+		<category><![CDATA[washington]]></category>
+		<guid isPermaLink="false">http://life.theill.com/blog/2017/07/17/2426/</guid>
+
+					<description><![CDATA[<p>The post <a rel="nofollow" href="/blog/2017/07/17/dinner-washington-friends/">Dinner at Washington friends</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="https://i0.wp.com/life.theill.com/wp-content/uploads/2017/07/img_0389.jpg"><img data-attachment-id="2425" data-permalink="/blog/2017/07/17/dinner-washington-friends/img_0389/" data-orig-file="https://i0.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0389.jpg?fit=1280%2C960&amp;ssl=1" data-orig-size="1280,960" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 6&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1500227170&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;2.65&quot;,&quot;iso&quot;:&quot;32&quot;,&quot;shutter_speed&quot;:&quot;0.0021645021645022&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_0389" data-image-description="" data-medium-file="https://i0.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0389.jpg?fit=300%2C225&amp;ssl=1" data-large-file="https://i0.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0389.jpg?fit=660%2C495&amp;ssl=1" loading="lazy" class="alignnone size-full wp-image-2425" src="https://i0.wp.com/life.theill.com/wp-content/uploads/2017/07/img_0389.jpg?resize=660%2C495" alt="" width="660" height="495" srcset="https://i0.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0389.jpg?w=1280&amp;ssl=1 1280w, https://i0.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0389.jpg?resize=300%2C225&amp;ssl=1 300w, https://i0.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0389.jpg?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0389.jpg?resize=1024%2C768&amp;ssl=1 1024w" sizes="(max-width: 660px) 100vw, 660px" data-recalc-dims="1" /></a></p>
+<p>The post <a rel="nofollow" href="/blog/2017/07/17/dinner-washington-friends/">Dinner at Washington friends</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2017/07/17/dinner-washington-friends/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2426</post-id>	</item>
+	</channel>
+</rss>

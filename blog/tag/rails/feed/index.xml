@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>rails &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/rails/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Sun, 14 Apr 2019 18:40:59 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>rails &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>Upgrading Rails Engines Project to Rails 2.3.2</title>
+		<link>/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/</link>
+					<comments>/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Sun, 15 Mar 2009 22:00:00 +0000</pubDate>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[rails]]></category>
+		<category><![CDATA[tip]]></category>
+		<guid isPermaLink="false">/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/</guid>
+
+					<description><![CDATA[<p>My lifestyleapps project (still in very early beta) was running Rails 2.2.2 with the Rails Engines plugin ten minutes ago. Today, Rails 2.3.2 was released so I decided to try if I could easily upgrade it and avoid using the Rails Engines plugin anymore. It was beautiful simple and took me less than ten minutes. &#8230; <a href="/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/" class="more-link">Continue reading <span class="screen-reader-text">Upgrading Rails Engines Project to Rails 2.3.2</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/">Upgrading Rails Engines Project to Rails 2.3.2</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>My <a href="http://lifestyleapps.com/">lifestyleapps</a> project (still in very early beta) was running Rails 2.2.2 with the Rails Engines plugin ten minutes ago. Today, Rails 2.3.2 was released so I decided to try if I could easily upgrade it and avoid using the Rails Engines plugin anymore. It was beautiful simple and took me less than ten minutes.</p>
+<p>First, I had to update our Apache Passenger module with a version supporting Rails 2.3 so I did a</p>
+<pre><code>$ gem update passenger
+</code></pre>
+<p>and then run the install to build our apache module</p>
+<pre><code>$ passenger-install-apache2-module
+</code></pre>
+<p>In my config/environment.rb I changed</p>
+<pre><code>RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
+</code></pre>
+<p>to</p>
+<pre><code>RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
+</code></pre>
+<p>and asked Rails to update my various script files by issuing</p>
+<pre><code>$ rake rails:update
+</code></pre>
+<p>Finally I remembered the application.rb should be named application_controller.rb now so I issued an explicit task for this as well</p>
+<pre><code>$ rake rails:update:application_controller
+</code></pre>
+<p>In the Rails Engines plugin you need to have the “routes.rb” file in the root of your plugin but with Rails 2.3.2 you should have it in the ‘config’ folder under your plugin and its content should be wrapped in “ActionController::Routing::Routes.draw do |map|” as the root routes.rb. So I changed this from</p>
+<pre><code>/vendor/plugins/life_intake/routes.rb
+</code></pre>
+<p>to</p>
+<pre><code>/vendor/plugins/life_intake/config/routes.rb
+</code></pre>
+<p>The contents of this routes.rb was changed from</p>
+<pre><code>map.resources :foods
+</code></pre>
+<p>to</p>
+<pre><code>ActionController::Routing::Routes.draw do |map|
+  map.resources :foods
+end
+</code></pre>
+<p>Finally I had to update the root “routes.rb” to avoid using the “from_plugin” call e.g. I simply removed lines such as</p>
+<pre><code>map.from_plugin :life_intake
+</code></pre>
+<p>Now I don’t need the Rails Engines plugin anymore so I removed it with</p>
+<pre><code>$ ./script/plugin remove engines
+</code></pre>
+<p>That’s it .. I was now able to run my tests and start up my project and have it run on Rails 2.3.2.</p>
+<p>Enjoy!</p>
+<p>The post <a rel="nofollow" href="/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/">Upgrading Rails Engines Project to Rails 2.3.2</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3417</post-id>	</item>
+	</channel>
+</rss>

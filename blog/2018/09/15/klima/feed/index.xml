@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Klimasafari	</title>
+	<atom:link href="/blog/2018/09/15/klima/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/2018/09/15/klima/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Sun, 16 Sep 2018 19:44:17 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+	<item>
+		<title>
+		By: Peter		</title>
+		<link>/blog/2018/09/15/klima/#comment-15501</link>
+
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Sun, 16 Sep 2018 19:44:17 +0000</pubDate>
+		<guid isPermaLink="false">http://www.fontlister.com/blog/2018/09/16/klima/#comment-15501</guid>
+
+					<description><![CDATA[In reply to &lt;a href=&quot;/blog/2018/09/15/klima/#comment-15500&quot;&gt;Rita&lt;/a&gt;.
+
+Man saa en film foerst -- hun spurgte &quot;Var det den film vi skulle ind at se? Jeg synes den var keeeeedelig&quot; :-D -- men der var nogle smaa-aktiviteter udenfor hun synes var meget sjove.]]></description>
+			<content:encoded><![CDATA[<p>In reply to <a href="/blog/2018/09/15/klima/#comment-15500">Rita</a>.</p>
+<p>Man saa en film foerst &#8212; hun spurgte &#8220;Var det den film vi skulle ind at se? Jeg synes den var keeeeedelig&#8221; 😀 &#8212; men der var nogle smaa-aktiviteter udenfor hun synes var meget sjove.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Rita		</title>
+		<link>/blog/2018/09/15/klima/#comment-15500</link>
+
+		<dc:creator><![CDATA[Rita]]></dc:creator>
+		<pubDate>Sun, 16 Sep 2018 19:37:36 +0000</pubDate>
+		<guid isPermaLink="false">http://www.fontlister.com/blog/2018/09/16/klima/#comment-15500</guid>
+
+					<description><![CDATA[Det ser spændende ud. 
+Hvad sagde Molly til det ?]]></description>
+			<content:encoded><![CDATA[<p>Det ser spændende ud.<br />
+Hvad sagde Molly til det ?</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

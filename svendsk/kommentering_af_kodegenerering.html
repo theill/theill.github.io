@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link rel="STYLESHEET" type="text/css" href="/svendsk/tekster.css">
+ <title>Svendsk - Kommentering af kodegenerering</title>
+<link rel="stylesheet" type="text/css" href="/css/theill.css">
+</head>
+
+<body link="#0000FF" bgcolor="#FFFFFF" text="#000000" vlink="#800080" alink="#FF0000">
+
+<h1>Kommentering af kodegenerering</h1>
+Vi har valgt at generere kode til et <i>free-standing/stand-alone</i> Java program, da vi mente, der var alt for mange problemer med applets. Vi genererer JDK 1.1 kode og selv nyeste version af de mest udbredte browsere (Microsoft Internet Explorer 4.0 og Netscape Communicator 4.0) kunne ikke vise denne Java-version (begge bruger JDK 1.0).<br>
+
+<br>
+<br>
+<h2>Java-kodens filnavn (*.java)</h2>
+Navnet på klassen der oprettes, er navnet på Svendsk programmet, fx vil<br>
+<br>
+<font face="Courier New">&nbsp;&nbsp;SVENDSK HelloWorld</font><br>
+
+<br>
+
+oprette følgende Java-kode:<br>
+<br>
+<font face="Courier New">&nbsp;&nbsp;public class HelloWorld {</font><br>
+
+<br>
+Det vil medføre, at filen med Java-kode skal have navnet HelloWorld.java, da Java compileren ellers nægter at oversætte filen. Vi havde først brugt <font face="Courier New">rename()</font>, som er en standardfunktion i C, men eftersom den ikke understøtter lange filnavne, blev vi nødt til at fuske lidt.<br>
+
+<br>
+Vi bruger i stedet DOS-kommandoerne <font face="Courier New">del</font> (delete) og <font face="Courier New">ren</font> (rename). Grunden til at vi bruger <font face="Courier New">del</font> er, at man ikke kan rename til en fil der eksisterer i forvejen.<br>
+
+<br>
+<br>
+
+<h2>Kompilerings-vanskeligheder</h2>
+Den genererede Java-kode kan godt være ukompilérbar. Det skyldes, at Svendsk ikke tager højde for, om programmøren har lavet uendelige løkker. Java tager højde for dette og nægter at kompilere programmet hvis det er tilfældet. Vi regnede kun med, at Java-compileren (javac) ville vise en advarsel (warning), men da koden skulle kompileres, genererede den i stedet en fejl (error). Det har ikke været muligt for os, at finde en option i javac der kunne fjerne dette check.<br>
+
+<br>
+<br>
+
+<h2>Formatering af den genererede kode</h2>
+Da vores compiler henvender sig til nybegyndere, var det et mål for os, at lave den genererede Java-kode letlæselig vha. indrykninger og mellemrum. Dette lykkedes også godt for os et langt stykke af vejen, men ved generering af en <font face="Courier New">hvis...ellers</font>-sætning fik vi problemer.<br>
+
+<br>
+Med <i>én</i> sætning efter en <font face="Courier New">hvis</font>, burde sætningen indrykkes med to mellemrum:<br>
+<br>
+
+<pre>
+  if(udtryk)
+    sætning
+</pre>
+
+Med <i>flere</i> sætninger efter en <font face="Courier New">hvis</font>, skal en blok startes. En blok tager selv højde for indrykninger:<br>
+
+<pre>
+  if(udtryk)
+  {
+    sætning1
+    sætning2
+    sætningN-1
+    sætningN
+  }
+</pre>
+
+Problemet var, at finde ud af om der kom én eller flere sætninger efter <font face="Courier New">hvis</font>. Vi prøvede fx at sammenligne næste token med FELT_START (&gt;&gt;), men det lykkedes os desværre ikke at få det til at virke.<br>
+
+<br>
+Vi har konkluderet, at dette problem ikke har kunnet løses tilfredstillende. Resultatet er, at vi ikke indrykker efter <font face="Courier New">hvis...ellers</font> med kun én efterfølgende sætning.<br>
+
+
+</body>
+</html>

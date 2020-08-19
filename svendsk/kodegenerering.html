@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link rel="STYLESHEET" type="text/css" href="/svendsk/tekster.css">
+ <title>Svendsk - Kodegenerering</title>
+<link rel="stylesheet" type="text/css" href="/css/theill.css">
+</head>
+
+<body link="#0000FF" bgcolor="#FFFFFF" text="#000000" vlink="#800080" alink="#FF0000">
+
+<h1>Kodegenerering</h1>
+Efter at have fuldført den leksikalske-, syntaktiske- og semantiske analyse, er det endelig blevet tid til at generere kode. Denne del kaldes compilerens back-end.<br>
+
+<br>
+Typisk vil der først blive oversat til et midlertidigt sprog, men ikke i vores tilfælde. Dette skyldes, at de fleste compilere kompilerer til maskinkode. Ved udarbejdelsen af sådanne compilere, er det selvfølgelig rart, først at generere eksempelvis Assembler, eller en anden mellemliggende repræsentation. I vores Svendsk-compiler, skal vi imidlertid generere, fra ét højniveau-sprog til et andet, hvorfor en midlertidig kode-repræsentation ikke vil være nogen umiddelbar fordel.<br>
+
+<br>
+Der er typisk to kriterier, der er bestemmende for ens kodegenerering. Det ene er om selve genereringen skal gå hurtigt, det andet er hvor god den genererede kode skal være. Dette er naturligvis to modstridende krav, der skal vejes op mod hinanden. I vores Svendsk har det ikke i så høj grad været muligt at generere specielt hurtig kode, hvilket skyldes at vi genererer til Java, der så at sige bestemmer hastigheden for os. Et kriterie for oversættelsen af Svendsk var, at den oversatte Java-kode, skulle skal være så overskuelig som mulig.<br>
+
+<br>
+Meget af vores kodegenerering har været forholdsvis ligetil, da vi skulle oversætte til Java. Dette skyldes, at Svendsk og Java ligger tæt op af hinanden rent syntaktisk.<br>
+
+<br>
+Et af vores kriterier for den oversatte kode, var at det skulle være nemt at læse, hvorfor vi valgte at formatere den oversatte kode. Dette gjorde vi bl.a. med indrykning i forhold til hvilket scope man er i. Da det var et forholdsvis vigtigt kriterie, at det skulle være nemt at læse, diskuterede vi om kommentarer i Svendsk, skulle oversættes til Java-kommentarer. Vi valgte ikke at medtage den grundet tids-mangel.<br>
+
+</body>
+</html>

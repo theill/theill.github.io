@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Visiting San Francisco	</title>
+	<atom:link href="/blog/2018/02/18/2723/feed/" rel="self" type="application/rss+xml" />
+	<link>/blog/2018/02/18/2723/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Sun, 25 Feb 2018 08:13:59 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+	<item>
+		<title>
+		By: Rita Theill		</title>
+		<link>/blog/2018/02/18/2723/#comment-59</link>
+
+		<dc:creator><![CDATA[Rita Theill]]></dc:creator>
+		<pubDate>Sun, 18 Feb 2018 08:03:29 +0000</pubDate>
+		<guid isPermaLink="false">http://life.theill.com/blog/2018/02/18/2723/#comment-59</guid>
+
+					<description><![CDATA[Ej hvor spændende billeder. Dejligt at vejret er med jer
+Forsat god tur
+Knus]]></description>
+			<content:encoded><![CDATA[<p>Ej hvor spændende billeder. Dejligt at vejret er med jer<br />
+Forsat god tur<br />
+Knus</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>

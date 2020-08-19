@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link rel="STYLESHEET" type="text/css" href="/svendsk/tekster.css">
+ <title>Svendsk - Leksikalsk analyse</title>
+<link rel="stylesheet" type="text/css" href="/css/theill.css">
+</head>
+
+<body link="#0000FF" bgcolor="#FFFFFF" text="#000000" vlink="#800080" alink="#FF0000">
+
+<h1>Leksikalsk analyse</h1>
+
+Analysen af et kildeprograms struktur starter med den leksikalske analyse. Derefter kommer den syntaktiske  og den semantiske analyse. Den sidstnævnte bliver sjældent regnet med, da den ofte ligger meget tæt op af den syntaktiske analyse, og oftest bliver skrevet sammen med denne.<br>
+<br>
+Der er to måder at lave en leksikalsk analysator på. Man kan selv lave den fra bunden (langhåret), eller man kan vælge at få den genereret v.h.a. et program som FLEX, hvilket vi har gjort.<br>
+<br>
+En leksikalsk analysator læser individuelle karakterer fra et kilde-sprog og samler dem i enheder (også kaldet <i>tokens</i>). I Svendsk ville fx h, e, l, t, a og l blive samlet til <font face="Courier New">heltal</font>, der netop er et token.<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="7" width="100%" bordercolor="Black">
+<tr bordercolor="White">
+ <td valign="TOP" align="CENTER"><a href="/svendsk/grafik/fig6_1.gif" target="_self"><img src="/svendsk/grafik/fig6_1.gif" width="440" border="0" alt="Figur 6.1 (15 kb)"></a></td>
+</tr>
+
+<tr>
+ <td valign="TOP" bgcolor="#000000" align="RIGHT"><font color="White" size="1"><b>Figur 6-1: Blok diagram for en leksikalsk analysator</b></font></td>
+</tr>
+</table>
+
+<br>
+I den leksikalske analyse, fjernes fx kommentarer fra sourcekoden og mellemrum mellem de forskellige tokens.<br>
+<br>
+Et token repræsenteres v.h.a. et heltal og en instans af et token kaldes et <i>lexeme</i>. I Svendsk har vi bl.a. et token <font face="Courier New">heltal</font> hvis lexemes indeholder cifre mellem 0 og 9. I vores tilfælde er det dog ikke umiddelbart muligt at vide, hvilket nummer et token har, da BISON selv genererer dette nummer for os. På den anden side har vi heller i brug for at vide det, da vi arbejder på et højere abstraktionsniveau; vi refererer jo til et givent token ved hjælp af dets navn.<br>
+<br>
+Hvis man har brug for at gemme information omkring et lexeme, bliver man nødt til at gemme disse informationer i en symbol-tabel. Her kan man gemme navne på variabler, deres type og værdi. I Svendsk har vi brug for en symbol-tabel når vi skal gemme en variabels type (heltal, boolsk og streng).<br>
+<br>
+<br>
+<h2>Symbol-tabellen</h2>
+Symbol-tabellen indeholder informationer om navne brugt i source programmet. Under den leksikalske analyse, kommer den kun til at indeholde variablers navne.<br>
+<br>
+Når man skal implementere en symboltabel, er der to metoder der er mest udbredt. Den ene er pointer-baseret, mens den anden er baseret på en hash-tabel. Hvis man implementerer tabellen med pointere, gør man det i et array, hvor der er en pointer til hvert element i arrayet. Hvis man implementerer det som en hash-tabel, har man en en hash-algoritme, der udregner et lexemes placering i tabellen.<br>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="7" width="100%" bordercolor="Black">
+<tr bordercolor="White">
+ <td valign="TOP" align="CENTER"><a href="/svendsk/grafik/fig6_2.gif" target="_self"><img src="/svendsk/grafik/fig6_2.gif" width="440" border="0" alt="Figur 6.2 (25 kb)"></a></td>
+</tr>
+
+<tr>
+ <td valign="TOP" align="RIGHT" bgcolor="#000000"><font color="White" size="1"><b>Figur 6-2: Symbol-tabel implementeret med pointere</b></font></td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<h2>Hjælperutiner</h2>
+Det er i FLEX muligt at lave hjælperutiner, hvilket vi har gjort brug af, da vi skulle implementere symbol-tabellen. Disse rutiner benyttes bl.a. til at slå op i tabellen og skrive et nyt navn i den. Nedenstående uddrag fra filen <font face="Courier New">symbtab.c</font> viser en funktion <font face="Courier New">lookup</font>, der checker om et ID findes i symbol-tabellen:<br>
+<br>
+<pre>
+  int lookup(char* s)
+  {
+    // Returnerer typen hvis fundet, ellers T_UNDEF
+
+    struct SYMB* tmp = symbtab;
+
+    while(tmp != NULL)
+      if(gScope &gt;= tmp-&gt;scope &amp;&amp; strcmp(tmp-&gt;navn, s) == 0)
+        return(tmp-&gt;type);
+      else
+        tmp = tmp-&gt;naeste;
+
+    return(T_UNDEF);
+  }
+</pre>
+
+Som det ses returnerer funktionen ID&#146;ets type, hvis det findes, og hvis det ikke findes, returnerer den <font face="Courier New">T_UNDEF</font>.<br>
+
+
+</body>
+</html>

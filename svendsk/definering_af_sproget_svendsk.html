@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link rel="STYLESHEET" type="text/css" href="/svendsk/tekster.css">
+ <title>Svendsk - Definering af sproget Svendsk</title>
+<link rel="stylesheet" type="text/css" href="/css/theill.css">
+</head>
+
+<body link="#0000FF" bgcolor="#FFFFFF" text="#000000" vlink="#800080" alink="#FF0000">
+
+<h1>Definering af sproget Svendsk</h1>
+
+Svendsk er &quot;case sensitive&quot;, hvilket betyder at der vil være forskel på, om man skriver fx &#146;Heltal&#146; eller &#146;heltal&#146;. Endvidere er Svendsk et &#146;dansk&#146; programmeringssprog, hvilket gør det lettere for folk uden programmerings-erfaring i andre sprog hurtigt at sætte sig ind i det. Det vil forekomme dem mere naturligt at skrive danske sætninger i stedet for engelske.
+<p>
+Da Svendsk er et mere primitivt sprog end Java, er det ikke muligt at udnytte Java fuldt ud ved udelukkende brug af Svendsk. Ydermere vil Svendsk være tæt bundet på Javas definition af bl.a. en <font face="Courier">int</font> og en <font face="Courier">boolean</font>. Hvis Java-sproget ændrer denne definition, vil det umiddelbart også medføre, at Svendsks definition af disse typer vil ændre sig.</p>
+<p>&nbsp;</p>
+
+<h2>Simple datatyper</h2>
+Svendsk har følgende simple datatyper. De er sat op mod Javas modstykker, så det er nemmere at se lighederne/forskellene mellem disse. Læg mærke til, at variablernes størrelse udelukkende er afhængig af Java. Hvis Java fx ændrer specifikationer for <font face="Courier New">int</font>, vil det medvirke at specifikationerne for det Svendske <font face="Courier New">heltal</font> også ændres.
+<p>&nbsp;</p>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="Black">
+<tr>
+ <td width="32%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Typer kendt fra Java</b></font></td>
+ <td width="32%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Svendsk modstykke</b></font></td>
+ <td width="36%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Størrelse</b></font></td>
+</tr>
+
+<tr>
+ <td width="32%" valign="TOP"><font size="2">boolean</font></td>
+ <td width="32%" valign="TOP"><font size="2">boolsk</font></td>
+ <td width="36%" valign="TOP"><font size="2">&#146;sand&#146; eller &#146;falsk&#146;</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="32%" valign="TOP"><font size="2">int</font></td>
+ <td width="32%" valign="TOP"><font size="2">heltal</font></td>
+ <td width="36%" valign="TOP"><font size="2">32-bit 2-komplimentær (dvs +/-)</font></td>
+</tr>
+
+<tr>
+ <td width="32%" valign="TOP"><font size="2">String</font></td>
+ <td width="32%" valign="TOP"><font size="2">streng</font></td>
+ <td width="36%" valign="TOP"><font size="2">-</font></td>
+</tr>
+</table>
+
+&nbsp;
+
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="Black">
+<tr>
+ <td width="14%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Type</b></font></td>
+ <td width="18%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Indeholder</b></font></td>
+ <td width="18%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Init. værdi</b></font></td>
+ <td width="15%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Størrelse</b></font></td>
+ <td width="18%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Min. værdi</b></font></td>
+ <td width="17%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Max. værdi</b></font></td>
+</tr>
+
+<tr>
+ <td width="14%" valign="TOP"><font size="2">boolsk</font></td>
+ <td width="18%" valign="TOP"><font size="2">sandt/falsk</font></td>
+ <td width="18%" valign="TOP"><font size="2">falsk</font></td>
+ <td width="15%" valign="TOP"><font size="2">1 bit</font></td>
+ <td width="18%" valign="TOP"><font size="2">-</font></td>
+ <td width="17%" valign="TOP"><font size="2">-</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="14%" valign="TOP"><font size="2">heltal</font></td>
+ <td width="18%" valign="TOP"><font size="2">et 2-komp. tal</font></td>
+ <td width="18%" valign="TOP"><font size="2">0</font></td>
+ <td width="15%" valign="TOP"><font size="2">32 bits</font></td>
+ <td width="18%" valign="TOP"><font size="2">-2147483648</font></td>
+ <td width="17%" valign="TOP"><font size="2">2147483647</font></td>
+</tr>
+
+<tr>
+ <td width="14%" valign="TOP"><font size="2">streng</font></td>
+ <td width="18%" valign="TOP"><font size="2">ASCII tegn</font></td>
+ <td width="18%" valign="TOP"><font size="2">&quot;&quot;</font></td>
+ <td width="15%" valign="TOP"><font size="2">-</font></td>
+ <td width="18%" valign="TOP"><font size="2">-</font></td>
+ <td width="17%" valign="TOP"><font size="2">-</font></td>
+</tr>
+</table>
+
+&nbsp;
+
+<h2>Typebeskrivelse</h2>
+
+<h2>Typen boolsk</h2>
+Typen boolsk kan have to værdier: <font face="Courier New">sand</font> eller <font face="Courier New">falsk</font>. Når typen erklæres, får den automatisk tildelt værdien <font face="Courier New">falsk</font>.
+<p>&nbsp;</p>
+<h2>Typen heltal</h2>
+Denne type har en størrelse på 32 bits, dvs. den kan indeholde tal i intervallet -2147483648 til 2147483647. Man kan altså <i>ikke</i> tildele fx en tekststreng til denne type.
+<p>&nbsp;</p>
+<h2>Typen streng</h2>
+Typen streng kan indeholde et vilkårligt antal af karakterer, men de skal være omgivet af anførelses tegn.
+<p>
+<i>Eksempel</i></p>
+<pre>
+  s.streng()
+  s = &quot;Svendsk&quot;
+  s = &quot;C U L8R&quot;
+</pre>
+
+&nbsp;
+
+<h2>Escape-sekvenser</h2>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="Black">
+<tr>
+ <td width="24%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Svendsk</b></font></td>
+ <td width="33%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Java</b></font></td>
+ <td width="43%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Betydning</b></font></td>
+</tr>
+
+<tr>
+ <td width="24%" valign="TOP"><font size="2">nylinie()</font></td>
+ <td width="33%" valign="TOP"><font size="2">\n</font></td>
+ <td width="43%" valign="TOP"><font size="2">indsætter ny linie</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="24%" valign="TOP"><font size="2">tabulator()</font></td>
+ <td width="33%" valign="TOP"><font size="2">\t</font></td>
+ <td width="43%" valign="TOP"><font size="2">indsætter tabulator (indrykning)</font></td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<h2>Regne-operatorer</h2>
+
+Regne-operatorerne bruges på samme måde som de bruges i Java.<br>
+<br>
+Nedenstående tabel viser Svendsks regne operatorer<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="Black">
+<tr>
+ <td width="24%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Operator</b></font></td>
+ <td width="33%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Brug</b></font></td>
+ <td width="43%" valign="TOP" bgcolor="#000000"><font color="White" size="2"><b>Beskrivelse</b></font></td>
+</tr>
+
+<tr>
+ <td width="24%" valign="TOP"><font size="2">+</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 + op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">Lægger op1 og op2 sammen</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="24%" valign="TOP"><font size="2">-</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 - op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">Trækker op2 fra op1</font></td>
+</tr>
+
+<tr>
+ <td width="24%" valign="TOP"><font size="2">*</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 * op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">Ganger op1 med op2</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="24%" valign="TOP"><font size="2">/</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 / op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">Dividerer op1 med op2</font></td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<h2>Sammenlignings-operatorer</h2>
+
+Sammenlignings operatorerne er næsten de samme som i Java, dog med en væsentlig forskel ved <i>lig med</i> og <i>forskellig fra</i> sammenligningen.<br>
+<br>
+I Svendsk bruges lig med (=) både som sammenlignings- og tildelings-operator.<br>
+<br>
+Nedenfor viser en tabel over Svendsk sammenlignings-operatorer<br>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="0">
+<tr>
+ <td width="24%" valign="TOP" bgcolor="#000000"><font size="2" color="White"><b>Operator</b></font></td>
+ <td width="33%" valign="TOP" bgcolor="#000000"><font size="2" color="White"><b>Brug</b></font></td>
+ <td width="43%" valign="TOP" bgcolor="#000000"><font size="2" color="White"><b>Beskrivelse</b></font></td>
+</tr>
+
+<tr>
+ <td width="24%" valign="TOP"><font size="2">&gt;</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 &gt; op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">op1 er større end op2</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="24%" valign="TOP"><font size="2">&gt;=</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 &gt;= op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">op1 er større end eller lig med op2</font></td>
+</tr>
+
+<tr>
+ <td width="24%" valign="TOP"><font size="2">&lt;</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 &lt; op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">op1 er mindre end op2</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="24%" valign="TOP"><font size="2">&lt;=</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 &lt;= op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">op1 er mindre end eller lig med op2</font></td>
+</tr>
+
+<tr>
+ <td width="24%" valign="TOP"><font size="2">=</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 = op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">op1 og op2 er lig</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="24%" valign="TOP"><font size="2">-=</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 -= op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">op1 og op2 er forskellig</font></td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<h2>Tildelings-operatoren</h2>
+
+Sproget Svendsk har kun én tildelings-operator (i modsætning til Javas &gt; 10).<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="Black">
+<tr>
+ <td width="24%" valign="TOP" bgcolor="#000000"><font size="2" color="White"><b>Operator</b></font></td>
+ <td width="33%" valign="TOP" bgcolor="#000000"><font size="2" color="White"><b>Brug</b></font></td>
+ <td width="43%" valign="TOP" bgcolor="#000000"><font size="2" color="White"><b>Beskrivelse</b></font></td>
+</tr>
+
+<tr>
+ <td width="24%" valign="TOP"><font size="2">=</font></td>
+ <td width="33%" valign="TOP"><font size="2">op1 = op2</font></td>
+ <td width="43%" valign="TOP"><font size="2">op1 bliver sat lig med op2</font></td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<h2>Eksempler på syntaks i Svendsk</h2>
+I det følgende er der nogle eksempler på Svendsks syntaks. Ved hvert eksempel har vi skrevet den tilsvarende kode i Java, for at tydeliggøre ligheder og forskelle i sprogene.<br>
+<br>
+<i>Eksempel 5-1: Løkker</i><br>
+En væsentlig fordel ved dataordbogen er, den naturlige måde hvorpå man laver løkker. Dette gøres ved brug af &#146;<font face="Courier New">{</font>&#146; og &#146;<font face="Courier New">}</font>&#146; også kaldet tuborg-start og tuborg-slut.<br>
+<br>
+&quot;Udfør en del kode 10 gange&quot;, kunne fx skrives på følgende måde. Læg mærke til, at<font face="Courier New"> ITERATION</font> er en variabel der oprettes automatisk når man går ind i en løkke. I nedenstående eksempel, vil <font face="Courier New">ITERATION</font> få en initialiseringsværdi = 0.<br>
+<br>
+<font face="Arial" size="1">Svendsk</font><br>
+<font face="Courier New" size="2">
+0{ skriv(&quot;Jeg er tal nummer: &quot;[ITERATION]) }9</font><br>
+<br>
+<font face="Arial" size="1">Java</font><br>
+<font face="Courier New" size="2">
+for (int i=0; i&lt;10; i++)<br>
+&nbsp;&nbsp;System.out.print(&quot;Jeg er tal nummer &quot;, Integer.toString(i));</font><br>
+<br>
+<br>
+<i>Eksempel 5-2: Deklarering af variabler</i><br>
+Deklareringen af variabler i Svendsk sker på en noget objekt-orienteret form, fx. erklæringen af et <font face="Courier New">heltal</font> (en <font face="Courier New">int</font> i Java) &#146;i&#146; ser således ud:<br>
+<br>
+<font face="Arial" size="1">Svendsk</font><br>
+<font face="Courier New">i.heltal()</font><br>
+<br>
+<font face="Arial">Java</font><br>
+<font face="Courier New">int i;</font><br>
+<br>
+<br>
+<i>Eksempel 5-3: Tildeling af tal til en variabel</i><br>
+Denne er lige ud af landevejen, da der som sagt kun findes én tildelings-operator i Svendsk:<br>
+<br>
+<font face="Arial" size="1">Svendsk</font><br>
+<font face="Courier New" size="2">i = 7</font><br>
+<br>
+<font face="Arial">Java</font><br>
+<font face="Courier New" size="2">i = 7;</font><br>
+<br>
+<br>
+<i>Eksempel 5-4: hvis...ellers sætningen</i><br>
+For at kunne vælge mellem forskellige statements i Svendsk, kan man bruge <font face="Courier New">hvis...ellers</font> sætningen:<br>
+<br>
+<font face="Arial" size="1">Svendsk</font><br>
+<font face="Courier New" size="2">
+hvis (i &lt; 7)<br>
+&nbsp;&nbsp;skriv(&quot;i er ikke så stort&quot;)<br>
+ellers<br>
+&nbsp;&nbsp;skriv(&quot;i er 7 eller derover&quot;)<br>
+</font>
+<br>
+<font face="Arial" size="1">Java</font><br>
+<font face="Courier New" size="2">
+if (i &lt; 7)<br>
+&nbsp;&nbsp;System.out.println(&quot;i er ikke så stort&quot;);<br>
+else<br>
+&nbsp;&nbsp;System.out.println(&quot;i er 7 eller derover);<br>
+</font>
+<br>
+<br>
+<h2>Reserverede ord</h2>
+Svendsk indeholder en række reserverede ord og det er derfor forbudt at bruge disse ord i fx en variabel-erklæring.
+<pre>afbryd
+boolsk
+ellers
+falsk
+heltal
+hvis
+ITERATION
+laes
+loopX // X er et tal &gt;= 0
+nylinie
+sand
+skriv
+streng
+SVENDSK
+tabulator</pre>
+
+Det er vigtigt, at alle disse reserverede ord skrives som ovenstående da Svendsk som
+allerede nævnt tidligere kender forskel på store og små bogstaver. De reserverede ord vil senere blive beskrevet i detaljer.
+
+</body>
+</html>

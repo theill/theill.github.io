@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>donate &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/donate/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Sun, 09 Jul 2017 04:49:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>donate &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>Introducing Forward &#8211; my latest project</title>
+		<link>/blog/2015/11/05/forward-charity-donations/</link>
+					<comments>/blog/2015/11/05/forward-charity-donations/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Thu, 05 Nov 2015 00:25:03 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[charity]]></category>
+		<category><![CDATA[donate]]></category>
+		<category><![CDATA[forward]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/work/2015/11/05/forward-charity-donations/</guid>
+
+					<description><![CDATA[<p>Forward is my latest project and allow you to donate your old stuff to our platform. When someone buy your stuff money goes to a charity you have chosen. Both an iPhone and Android app is available from respective stores and you’re able to read much more about this cool project from our Forward web &#8230; <a href="/blog/2015/11/05/forward-charity-donations/" class="more-link">Continue reading <span class="screen-reader-text">Introducing Forward &#8211; my latest project</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2015/11/05/forward-charity-donations/">Introducing Forward &#8211; my latest project</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="https://forwardapphq.com/">Forward</a> is my latest project and allow you to donate your old stuff to our platform. When someone buy your stuff money goes to a charity you have chosen.</p>
+<p>Both an iPhone and Android app is available from respective stores and you’re able to read much more about this cool project from our <a href="https://forwardapphq.com/">Forward web site</a>.</p>
+<p>The post <a rel="nofollow" href="/blog/2015/11/05/forward-charity-donations/">Introducing Forward &#8211; my latest project</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2015/11/05/forward-charity-donations/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">10</post-id>	</item>
+	</channel>
+</rss>

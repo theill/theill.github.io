@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link rel="STYLESHEET" type="text/css" href="/svendsk/tekster.css">
+ <title>Svendsk - Kommentering af makefile</title>
+<link rel="stylesheet" type="text/css" href="/css/theill.css">
+</head>
+
+<body link="#0000FF" bgcolor="#FFFFFF" text="#000000" vlink="#800080" alink="#FF0000">
+
+<h1>Kommentering af makefile</h1>
+Vi har valgt at lave en makefile til Svendsk, da der compileres og linkes en hel del filer.<br>
+
+<br>
+Der bruges <b>fire</b> værktøjer til generering af <font face="Courier New">svendsk.exe</font> (compileren): BISON, FLEX, Borland C++ (BCC) og MAKE. Vi vil beskrive de to første værktøjer i detaljer andetsteds i dette dokument, hvorimod BCC og MAKE kun beskrives overfladisk.<br>
+
+<br>
+Følgende er første version af vores makefile og i forhold til den endelige version (se bilag) mangler den ting som linkning af symbol-tabellen.<br>
+
+<br>
+<table border="1" cellspacing="0" cellpadding="7" width="100%" bordercolor="Black">
+<tr bordercolor="White">
+ <td valign="TOP">
+ <pre>
+# Makefile for Svendsk.exe - en Svendsk-&gt;Java Compiler
+
+svendsk.exe : svendsk.obj lexyy.obj
+	bcc -esvendsk.exe svendsk.obj lexyy.obj
+
+svendsk.obj : svendsk.c svendsk.h
+	bcc -c -w-ccc -w-rch -w-pro -Ic:\borlandc\classlib\include -Lc:\borlandc\classlib\lib svendsk.c
+
+svendsk.c : svendsk.y
+	c:\flex_bis\bison -v -d -Hc:\flex_bis\bison.h -Sc:\flex_bis\bison.cc -o svendsk.c svendsk.y
+
+lexyy.obj : lexyy.c svendsk.h
+	bcc  -c -w-ccc -w-rch -w-pro lexyy.c
+
+lexyy.c : svendsk.l
+	c:\flex_bis\flex -I -8 -Hc:\flex_bis\flexskel.h -Sc:\flex_bis\flexskel.cc svendsk.l</pre></td>
+</tr>
+
+<tr>
+ <td valign="TOP" bgcolor="#000000" align="RIGHT"><font color="White" size="1"><b>Eksempel 7-1: Makefile, første udgave</b></font></td>
+</tr>
+</table>
+
+<br>
+<br>
+<h2>BISON</h2>
+Version 1.21-5, tilpasset fra GNU BISON af <a href="mailto:coetmeur@icdc.fr">coetmeur@icdc.fr</a>.<br>
+<br>
+I nedenstående tabel redegøres for betydningen af de valgte parametre i BISON.<br>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="7" width="100%" bordercolor="Black">
+<tr>
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-d</b></font></td>
+ <td width="90%" valign="TOP">Beder BISON producere header-filen <font face="Courier New">svendsk.h</font> der indeholder bl.a. <font face="Courier New">#define</font>'s af brugte tokens. Headerfilen kan derefter bruges i andre programmer, fx i den leksikalske analyse, dvs. FLEX.</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-o</b></font></td>
+ <td width="90%" valign="TOP">Angiver navnet på output-filen (<font face="Courier New">svendsk.c</font>), dvs. den genererede BISON parser.</td>
+</tr>
+
+<tr>
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-H</b></font></td>
+ <td width="90%" valign="TOP">Angiver den fulde sti til filen bison.h</td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-S</b></font></td>
+ <td width="90%" valign="TOP">Angiver den fulde sti til filen bison.cc</td>
+</tr>
+
+<tr>
+ <td align="RIGHT" valign="TOP" colspan="2" bgcolor="#000000"><font color="White" size="1"><b>Tabel 7-1: Brugte parametre i BISON</b></font></td>
+</tr>
+</table>
+
+<br>
+<br>
+<b>FLEX</b><br>
+Version 3.0.2, baseret på 2.3.8 og ændret af <a href="mailto:coetmeur@icdc.fr">coetmeur@icdc.fr</a> til C++.<br>
+
+<br>
+I nedenstående tabel redegøres for betydningen af de valgte parametre i FLEX.<br>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="7" width="100%" bordercolor="Black">
+<tr>
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-8</b></font></td>
+ <td width="90%" valign="TOP">Fortæller FLEX, at den skal generere en 8-bit scanner, dvs en scanner der kan forstå 8-bit karakterer (fx æ, ø og å). Hvis man ikke medtager denne parameter, vil man i stedet få genereret en 7-bit scanner, dvs en scanner der kun forstår 128 tegn. Giver man den en 8-bit karakter, kan det resultere i uendelige løkker.</td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-H</b></font></td>
+ <td width="90%" valign="TOP">Angiver stien til FLEXs header-skelet fil, dvs. den fil FLEX bruger til at generere scanneren med.</td>
+</tr>
+
+<tr>
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-S</b></font></td>
+<td width="90%" valign="TOP">Angiver stien til FLEXs C-skelet fil.</td>
+</tr>
+
+<t>
+ <td valign="TOP" colspan="2" bgcolor="#000000" align="RIGHT"><font color="White" size="1"><b>Tabel 7-2: Brugte parametre i FLEX</b></font></td>
+</tr>
+</table>
+
+<br>
+<br>
+<b>Borland C++ (BCC)</b><br>
+Version 3.1 - Copyright (c) 1992 Borland International<br>
+
+<br>
+I nedenstående tabel redegøres for betydningen af de valgte parametre i BCC.<br>
+<br>
+
+<table border="1" cellspacing="0" cellpadding="7" width="100%" bordercolor="Black">
+<tr>
+ <td width="10%" valign="TOP"><font face="Courier New"><br>-c</b></font></td>
+ <td width="90%" valign="TOP"><br>Filerne skal kun compileres, dvs ingen linkning.</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-e</b></font></td>
+ <td width="90%" valign="TOP">Angiver et navn til den producerede eksekverbare fil.</font></td>
+</tr>
+
+<tr>
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-w</b></font></td>
+ <td width="90%" valign="TOP">Bruges til at fjerne diverse warnings som kan forekomme når de BISON og FLEX genererede filer (hhv. <font face="Courier New">svendsk.c</font> og <font face="Courier New">lexyy.c</font>) skal kompileres.</td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-I</b></font></td>
+ <td width="90%" valign="TOP">Stien til include-filerne.</td>
+</tr>
+
+<tr>
+ <td width="10%" valign="TOP"><font face="Courier New"><b>-L</b></font></td>
+ <td width="90%" valign="TOP">Stien til include-bibliotekerne.</td>
+</tr>
+
+<tr>
+ <td align="RIGHT" valign="TOP" colspan="2" bgcolor="#000000"><font color="White" size="1"><b>Tabel 7-3: Brugte parametre i BCC</b></font></td>
+</tr>
+</table>
+
+<br>
+<br>
+<h2>MAKE</h2>
+Version 5.1  Copyright (c) 1987, 1998 Borland International<br>
+<br>
+En makefile er en avanceret batch-fil, dvs en fil der letter trivielle opgaver.<br>
+
+<br>
+MAKE bruges til at køre vores makefile og behøver kun parametre, hvis den skal lave en speciel aktion; fx en 'clean'.<br>
+
+
+</body>
+</html>

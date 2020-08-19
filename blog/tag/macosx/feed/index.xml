@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>macosx &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/macosx/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Fri, 27 Nov 2015 09:06:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>macosx &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>Wallpapers for El Capitan</title>
+		<link>/blog/2015/11/27/wallpapers-for-el-capitan/</link>
+					<comments>/blog/2015/11/27/wallpapers-for-el-capitan/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Fri, 27 Nov 2015 09:06:00 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[el capitan]]></category>
+		<category><![CDATA[macosx]]></category>
+		<category><![CDATA[osx]]></category>
+		<category><![CDATA[wallpapers]]></category>
+		<category><![CDATA[wallpapery]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/work/2015/11/27/wallpapers-for-el-capitan/</guid>
+
+					<description><![CDATA[<p>We updated our app Wallpapery with a bunch of cool El Capitan wallpapers. These wallpapers are all hi-res wallpapers and capable of span multiple screens. If you haven&#8217;t yet downloaded Wallpapery for your Mac you should get hold of a copy immediately. Doing a tweet with #wallpapery might even do you eligable for a free &#8230; <a href="/blog/2015/11/27/wallpapers-for-el-capitan/" class="more-link">Continue reading <span class="screen-reader-text">Wallpapers for El Capitan</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2015/11/27/wallpapers-for-el-capitan/">Wallpapers for El Capitan</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>We updated our app Wallpapery with a bunch of cool El Capitan wallpapers. These wallpapers are all hi-res wallpapers and capable of span multiple screens.</p>
+<p>If you haven&rsquo;t yet downloaded <a href="http://www.wallpaperyapp.com/">Wallpapery</a> for your Mac you should get hold of a copy immediately.</p>
+<p>Doing a tweet with #wallpapery might even do you eligable for a free copy as a x-mas gift.</p>
+<p>The post <a rel="nofollow" href="/blog/2015/11/27/wallpapers-for-el-capitan/">Wallpapers for El Capitan</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2015/11/27/wallpapers-for-el-capitan/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">9</post-id>	</item>
+	</channel>
+</rss>

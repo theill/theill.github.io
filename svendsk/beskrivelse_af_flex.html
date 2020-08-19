@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link rel="STYLESHEET" type="text/css" href="/svendsk/tekster.css">
+ <title>Svendsk - Beskrivelse af FLEX</title>
+<link rel="stylesheet" type="text/css" href="/css/theill.css">
+</head>
+
+<body link="#0000FF" bgcolor="#FFFFFF" text="#000000" vlink="#800080" alink="#FF0000">
+
+<h1>Beskrivelse af FLEX</h1>
+
+FLEX (Fast LEXical analyser generator) er en leksikalsk analysator, der kan køre under både PC og UNIX. Vi har valgt at bruge denne, da vi udelukkende udvikler Svendsk på PC-baserede computere. FLEX udspringer fra den ældre LEX, der udelukkende er tilgængelig i en UNIX-version.<br>
+<br>
+FLEX er et værktøj, der bruges til at generere <i>scanners</i>. Scanners er programmer der kan genkende leksikalske mønstre i en tekst. Udfra nogle opsatte definitioner og regler, genererer FLEX C-kode (i filen <font face="Courier New">lexyy.c</font>)  med en rutine kaldet yylex(). Hver gang rutinen kaldes, findes den næste token i teksten.<br>
+<br>
+Syntaksen i FLEX skrives v.h.a. det, der kaldes regulære udtryk. Regulære udtryk  kan sammenlignes med den kendte BNF (Backus Naur Form) syntaks, som bl.a. bruges i beskrivelser af DOS- og UNIX-kommandoer.<br>
+<br>
+Følgende tabel giver et overblik over grundprincipperne i regulære udtryk.<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="Black">
+<tr>
+ <td valign="TOP" colspan="3" bgcolor="#000000">
+ <font size="2" color="White"><b>Tabel 4-1: Grundprincipper i regulære udtryk</b></font></td>
+</tr>
+
+<tr>
+ <td width="47%" valign="TOP"><font size="2">Sammensætning (Concatenation)</font></td>
+ <td align="CENTER" width="12%" valign="TOP"><font size="2">xy</font></td>
+ <td width="41%" valign="TOP"><font size="2">Mønsteret består af x fulgt af y</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="47%" valign="TOP"><font size="2">Alternativ (Alternation)</font></td>
+ <td align="CENTER" width="12%" valign="TOP"><font size="2">x|y</font></td>
+ <td width="41%" valign="TOP"><font size="2">Mønsteret består af enten x eller y</font></td>
+</tr>
+
+<tr>
+ <td width="47%" valign="TOP"><font size="2">Arbitrær gentagelse (Arbitrary repetition)</font></td>
+ <td align="CENTER" width="12%" valign="TOP"><font size="2">x*</font></td>
+ <td width="41%" valign="TOP"><font size="2">Mønsteret består af strengen x gentaget nul eller flere gange</font></td>
+</tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+ <td align="RIGHT"><font size="1">Kilde: Introduction to Compiling Techniques, 2<sup>nd</sup> Edition (Tabel 5.2 side 75)</font></td>
+</tr>
+</table>
+<br>
+<br>
+Ud over disse grundprincipper, er FLEX udvidet med sine egne. De er vist i nedenstående tabel.<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="#000000">
+<tr>
+ <td valign="TOP" colspan="3" bgcolor="#000000">
+ <font color="White" size="2"><b>Tabel 4-2: Udvidelser af grundprincipperne brugt af FLEX</b></font></td>
+</tr>
+
+<tr>
+ <td width="32%" valign="TOP"><font size="2">Karakter klasser</font></td>
+ <td align="CENTER" width="13%" valign="TOP"><font size="2">[0-9]</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><p align="JUSTIFY"><font size="2">Et valg af karakterer i mængden; i dette tilfælde 0|1|2|3|4|5|6|7|8|9. Det er muligt at specificere mere end én mængde, fx [A-Za-z]</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="32%" valign="TOP"><font size="2">NOT operator</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">^</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><p align="JUSTIFY"><font size="2">Angives som første tegn for at invertere det følgende, fx [^A-Z] betyder at der <i>ikke</i> må startes med stort bogstav</font></td>
+</tr>
+
+<tr>
+ <td width="32%" valign="TOP"><font size="2">Arbitrær karakter</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">.</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Matcher alle tegn med undtagelse af ny linie</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="32%" valign="TOP"><font size="2">Enkel gentagelse</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">x?</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Nul eller én forekomst af x. I Svendsk bruges fx '-?' i definitionen for et tal, for at angive at der max. må forekomme ét minus-tegn.</font></td>
+</tr>
+
+<tr>
+ <td width="32%" valign="TOP"><font size="2">Ikke-nul gentagelse</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">x+</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">x gentaget én eller flere gange</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="32%" valign="TOP"><font size="2">Specificeret gentagelse</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">x{n, m}</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">x gentaget mellem n og m gange</font></td>
+</tr>
+
+<tr>
+ <td width="32%" valign="TOP"><font size="2">Begyndelse af linie</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">^x</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Match kun x i begyndelsen af en linie</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="32%" valign="TOP"><font size="2">Slutning af linie</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">x$</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Match kun x i slutningen af en linie</font></td>
+</tr>
+
+<tr>
+ <td width="32%" valign="TOP"><font size="2">Kontekst følsom</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">ab/cd</font></td>
+ <td width="55%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Match kun ab når fulgt af cd</font></td>
+</tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+ <td align="RIGHT"><font size="1">Kilde: Introduction to Compiling Techniques, 2<sup>nd</sup> Edition (Tabel 5.3 side 76)</font></td>
+</tr>
+</table>
+<br>
+<br>
+Nogle gange er det nødvendigt at bruge tegn som FLEX selv bruger i sine principper. Nedenstående tabel viser hvordan man undgår problemer.<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="Black">
+<tr>
+ <td valign="TOP" colspan="3" bgcolor="#000000"><font color="White" size="2"><b>Tabel 4-3: Udvidelser der involverer tegn med speciel betydning</b></font></td>
+</tr>
+
+<tr>
+ <td width="33%" valign="TOP"><font size="2">Litterære strenge</font></td>
+ <td width="13%" valign="TOP" align="CENTER"><font size="2">&quot;x&quot;</font></td>
+ <td width="54%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Brug x og ikke en evt. speciel betydning. Dette kan især være brugbart i Svendsk, når der skal tjekkes for &quot;()&quot;.</font></td>
+</tr>
+
+<tr bgcolor="#F0F0F0">
+ <td width="33%" valign="TOP"><font size="2">Litterære tegn</font></td>
+<td width="13%" valign="TOP" align="CENTER"><font size="2">\x</font></td>
+<td width="54%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Hvis x er en operator, bruges x. Nyttigt i Svendsk, når vi i tekst-strenge bruger &quot;-tegnet.</font></td>
+</tr>
+
+<tr>
+ <td width="33%" valign="TOP"><font size="2">Definitioner</font></td>
+<td width="13%" valign="TOP" align="CENTER"><font size="2">{<font face="Courier New" size="2">navn</font>}</font></td>
+<td width="54%" valign="TOP" align="JUSTIFY"><font size="2"><p align="JUSTIFY">Erstat med predefineret mønster </font><font face="Courier New" size="2">navn</font><font face="Tahoma" size="2">.</font></td>
+</tr>
+</table>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+ <td align="RIGHT"><font size="1">Kilde: Introduction to Compiling Techniques, 2<sup>nd</sup> Edition (Tabel 5.4 side 76)</font></td>
+</tr>
+</table>
+<br>
+<br>
+Et FLEX-program har denne generelle form:<br>
+<br>
+<br>
+Definitioner<br>
+<br>
+<b>%%</b><br>
+Regler<br>
+<b>%%</b><br>
+Egne rutiner, skrevet i C<br>
+<br>
+<br>
+Følgende eksempel er fra <font face="Courier New">svendsk.l</font> og viser et uddrag fra vores FLEX program.<br>
+<br>
+<table border="1" cellspacing="0" cellpadding="4" width="100%" bordercolor="0">
+<tr bordercolor="White">
+ <td valign="TOP">
+ <pre>
+ /* Definitioner */
+
+ kommentar       &quot;;&gt;&quot;[^&quot;&lt;;&quot;\n]*&quot;&lt;;&quot;
+ mellemrum       [ \t\n]+
+ tegn            [^\[\]\(\)] // ASCII undt. '[', ']', '(', ')'
+ skriv_tekst     ({tegn})*
+
+ %% /* Regler */
+
+ {mellemrum}     { }
+ {kommentar}     { }
+ &quot;&gt;&gt;&quot;      { return(FELT_START) }
+ &quot;&lt;&lt;&quot;      { return(FELT_STOP) }
+
+ %% /* Kode */
+
+ // Ingen kode endnu
+ </pre>
+ </td>
+</tr>
+
+<tr>
+ <td valign="TOP" bgcolor="#000000" align="RIGHT"><font color="White" size="1"><b>Eksempel 4-1: Et FLEX program</b></font></td>
+</tr>
+</table>
+
+
+
+</body>
+</html>

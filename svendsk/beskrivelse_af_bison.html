@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+ <link rel="STYLESHEET" type="text/css" href="/svendsk/tekster.css">
+ <title>Svendsk - Beskrivelse af BISON</title>
+<link rel="stylesheet" type="text/css" href="/css/theill.css">
+</head>
+
+<body link="#0000FF" bgcolor="#FFFFFF" text="#000000" vlink="#800080" alink="#FF0000">
+<h1>Beskrivelse af BISON</h1>
+
+At lave en compiler helt fra bunden er en større opgave og temmelig besværlig. Heldigvis findes der hjælpeværktøjer, som ud fra en given grammatik og associerede semantiske aktioner (dvs. en attributgrammatik), kan hjælpe med at lave en parser og generere de tabeller den skal bruge. Parseren er selve analysedelen i en compiler, da den gennemløber koden, og checker om den er korrekt, ud fra grammatikken. En compiler består både af en parser og en kodegenerator (så det kan blive oversat). De forskellige dele af en compiler forklares yderligere senere.<br>
+<br>
+De hjælpeværktøjer man kan bruge til at lave en parser og de tilhørende tabeller kaldes <i>parser generatorer </i>eller <i>compiler compilere</i>. Den parser som de genererer får som input<b> </b>et program i source language, eller en strøm af tokens fra en leksikalsk analysator (genereres seperat i et andet hjælpe-program).<br>
+<br>
+Et af de mest brugte programmer inden for dette område er YACC (Yet Another Compiler Compiler), som er let tilgængeligt under UNIX. Vi har dog valgt at bruge BISON, som er en ikke-kommerciel version af YACC. BISON har bl.a. den fordel, at den kan køre på en almindelig PC. Vi vil i det efterfølgende referere til BISON, selvom de fleste kilder det følgende er bygget på, omhandler YACC.<br>
+<br>
+<br>
+<h2>BISON</h2>
+BISON bruges til at lave en shift-reduce parser og de tilhørende LALR(1) parser-tabeller udfra et programmeringssprogs grammatik.<br>
+<br>
+En shift-reduce parser gennemløber koden, ved at læse tokens et efter et. Den består af en generel parser (skrevet i C), og benytter en stak med tilstande (eller states), samt to tabeller (Action- og Goto-tabellen). Tabellerne er specifikke i forhold til sproget som skal parses (i dette tilfælde Svendsk). Tabellerne genereres af parser-generatoren ud fra sprogets grammatik.<br>
+<br>
+<i>Action-tabellen</i><br>
+Bestemmer ud fra den øverste state på stakken og det næste input-token, om der skal skiftes, reduceres, accepteres eller sættes flag for error.</p>
+
+<i>Goto-tabellen</i><br>
+Hvis der skiftes (<i>shift</i>) eller reduceres (<i>reduce</i>), bestemmer denne tabel hvilken status der skal på stakken.<br>
+<br>
+For yderligere dybdegående oplysninger, se <i>Compiling Techniques </i>s. 97-101.<br>
+<br>
+Som før sagt får BISON som input en strøm af tokens fra en leksikalsk analysator. Denne analysator genereres af FLEX (eller LEX, hvis det skulle have modsvaret YACC).<br>
+<br>
+En af BISONs stærke sider er muligheden for at skabe præcedens for operatorer, hvilket eliminerer de værste risici for at lave en tvetydig grammatik.<br>
+<br>
+En tvetydig grammatik er især et problem med aritmetiske udtryk:<br>
+<br>
+<font face="Courier New">1+2*5 =&gt; (1+2)*5 = 15  // uden præcedens</font><br>
+<br>
+<pre>
+%left ELLER
+%left OG
+%left SAMMENLIGN IKKELIG
+%left '&lt;' '&gt;' MINDRELIG STOERRELIG
+%left '+' '-'
+%left '*' '/'
+%right UMINUS IKKE
+</pre>
+Ovenstående sætninger gør, at udtrykket bliver opfattet korrekt, dvs som:<br>
+<br>
+<font face="Courier New">1+2*5 =&gt; 1+(2*5) = 11  // med præcedens</font><br>
+<br>
+<br>
+<h2>Syntaks for BISON</h2>
+
+Et BISON-program er delt op i tre generelle dele, nemlig deklarationer, regler og support-rutiner. Denne logiske opdeling er næsten identisk med den man finder i FLEX.<br>
+<br>
+Et BISON programs generelle form:<br>
+<br>
+<br>
+Deklarationer<br>
+<b>%%</b><br>
+Regler<br>
+<b>%%</b><br>
+Support rutiner<br>
+<br>
+<br>
+<i>Deklarationer:</i><br>
+Erklæring af tokens brugt af grammatikken. Det omfatter tokens på en karakter og tokens på flere karakterer (returneret af FLEX). Disse tokens får hver deres nummer startende fra 257. Numre fra 0 til 255 repræsenterer ASCII-tegnene, og 256 bruges som fejl-token.<br>
+<br>
+I deklarations-afsnittet erklæres også præcedens- og associationsregler, dvs. hvilke tokens binder stærkest, og til hvilken side de binder. Fx har vi allerede været inde på, at <font face="Courier New">*</font> og <font face="Courier New">/</font> binder stærkere end <font face="Courier New">+</font> og <font face="Courier New">-</font>. Alle disse tokens binder til venstre, men et token som <font face="Courier New">ikke</font> (boolsk, ækvivalent med NOT eller !) binder til højre.<br>
+<br>
+Endvidere erklæres der en union, der indeholder alle ID&#146;ernes oplysninger. Det er opysninger som navn, type, virkefelt og indhold. Disse oplysninger bruges i symboltabellen.<br>
+<br>
+Derudover tildeles der en type til terminalers og non-terminalers attribut ($$). Det vil sige at når man fx har et udtryk der indeholder heltals-addition, skal selve udtrykket tildeles typen <font face="Courier New">heltal</font>.<br>
+<br>
+<br>
+<i>Regler:</i><br>
+Her defineres grammatik og semantiske aktioner.<br>
+<br>
+<br>
+<i>Support rutiner:</i>
+Dette er rutiner der understøtter de semantiske aktioner. Det kunne fx være en rutine til fejludskrift. I tilfælde af større programmer kan disse rutiner lægges ud i en separat fil. Dette kunne bl.a. være fornuftigt med alle de rutiner, der arbejder på symboltabellen (i vores tilfælde <font face="Courier New">symbtab.c</font>).<br>
+<br>
+Følgende eksempel er vores udskrivningsrutine til fejl-meddelelser:<br>
+<br>
+<pre>
+int yyerror(const char* c1, const char* c2)
+{
+  fprintf(stderr, &quot;Fejl på linie %d, tegn %d - &quot;, yylineno, yycharno);
+
+  if (c2 == NULL)
+    fprintf(stderr, c1);
+  else
+    fprintf(stderr, c1, c2);
+
+  fprintf(stderr, &quot;\n&quot;);
+
+  return(1);
+}
+</pre>
+<br>
+<h2>Hvorfor BISON?</h2>
+Det var et naturligt valg for os at benytte BISON, da vores lærebog selv bruger den, men også fordi det er det mest udbredte værktøj inden for sin kategori.<br>
+<br>
+BISON er ikke det eneste værktøj der kan bruges i denne sammenhæng, men det er mere robust end mange andre parser-generatorer. Dette kan forklares ved, at andre værktøjer ofte er beregnet på udforskning inden for området, fx på universiteter. BISON derimod, er meget udbredt (kan hentes på Nettet) og er dermed blevet gennemtestet af flere mennesker gennem en lang årrække, hvorfor det naturligvis er mere stabilt.
+
+</body>
+</html>

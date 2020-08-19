@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>familio &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/category/familio/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Thu, 16 Aug 2018 11:38:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>familio &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>Sensible NS*UsageDescription values</title>
+		<link>/blog/2018/08/14/ns-usage-description-default-values/</link>
+					<comments>/blog/2018/08/14/ns-usage-description-default-values/#comments</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Tue, 14 Aug 2018 12:37:33 +0000</pubDate>
+				<category><![CDATA[familio]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[ios]]></category>
+		<guid isPermaLink="false">/?p=3089</guid>
+
+					<description><![CDATA[<p>While working on Familio I regular have to add new usage descriptions in our Info.plist. These usage descriptions are required when asking for various kinds of permission. I&#8217;ve collected my list of default usage descriptions which others might find useful as a sensible default. &#60;key>NSBluetoothPeripheralUsageDescription&#60;/key>&#60;string>By allowing access to Bluetooth, we are able to communicate with &#8230; <a href="/blog/2018/08/14/ns-usage-description-default-values/" class="more-link">Continue reading <span class="screen-reader-text">Sensible NS*UsageDescription values</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2018/08/14/ns-usage-description-default-values/">Sensible NS*UsageDescription values</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<p class="has-regular-font-size">While working on <a href="https://familiohq.com/">Familio</a> I regular have to add new usage descriptions in our Info.plist. These usage descriptions are required when asking for various kinds of permission.</p>
+
+
+
+<p>I&#8217;ve collected my list of default usage descriptions which others might find useful as a sensible default.</p>
+
+
+
+<pre class="wp-block-preformatted">&lt;key>NSBluetoothPeripheralUsageDescription&lt;/key><br/>&lt;string>By allowing access to Bluetooth, we are able to communicate with other families with ease&lt;/string><br/><br/>&lt;key>NSContactsUsageDescription&lt;/key><br/>&lt;string>By allowing access to your contacts, we are able to read phone and emails of your existing contacts&lt;/string><br/><br/>&lt;key>NSCalendarsUsageDescription&lt;/key><br/>&lt;string>By allowing access to your calendar, we are able to process invites automatically for you&lt;/string><br/><br/>&lt;key>NSCameraUsageDescription&lt;/key><br/>&lt;string>By allowing access to your camera, we are able to take a selfie for your profile picture&lt;/string><br/><br/>&lt;key>NSLocationWhenInUseUsageDescription&lt;/key><br/>&lt;string>By allowing access to your location, we are able to provide services in your geographical area&lt;/string><br/><br/>&lt;key>NSPhotoLibraryAddUsageDescription&lt;/key><br/>&lt;string>By allowing access to your photo library, we are able to store pictures you are taking on your device&lt;/string><br/><br/>&lt;key>NSPhotoLibraryUsageDescription&lt;/key>  &lt;string>By allowing access to your photo library, we are able to store your captured pictures&lt;/string><br/><br/>&lt;key>NSSpeechRecognitionUsageDescription&lt;/key><br/>&lt;string>By allowing access to speech, we are able to faster enter information for you&lt;/string><br/><br/>&lt;key>NSAppleMusicUsageDescription&lt;/key><br/>&lt;string>By allowing access to Apple Music, we are able to suggest music for you and your family&lt;/string><br/><br/>&lt;key>NSMicrophoneUsageDescription&lt;/key><br/>&lt;string>By allowing access to your microphone, we are able to send your voice when performing a call&lt;/string><br/><br/>&lt;key>NSMotionUsageDescription&lt;/key><br/>&lt;string>By allowing access to motion usage, we are able to better detect how you and your family move&lt;/string></pre>
+<p>The post <a rel="nofollow" href="/blog/2018/08/14/ns-usage-description-default-values/">Sensible NS*UsageDescription values</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2018/08/14/ns-usage-description-default-values/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3089</post-id>	</item>
+	</channel>
+</rss>

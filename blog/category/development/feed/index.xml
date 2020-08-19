@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>development &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/category/development/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Sun, 14 Apr 2019 18:47:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>development &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>An error occurred while validating.  HRESULT = &#8216;8001010E&#8217;</title>
+		<link>/blog/2010/05/03/an-error-occurred-while-validating-hresult-8001010e/</link>
+					<comments>/blog/2010/05/03/an-error-occurred-while-validating-hresult-8001010e/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Sun, 02 May 2010 22:00:00 +0000</pubDate>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[tip]]></category>
+		<guid isPermaLink="false">/blog/2010/05/03/an-error-occurred-while-validating-hresult-8001010e/</guid>
+
+					<description><![CDATA[<p>Just a quick tip. While upgrading one of my projects from VS.NET 2008 to VS.NET 2010 I ran into a problem I wasn’t able to find a correct solution for it anywhere. While building my setup projects I got: An error occurred while validating. HRESULT = ‘8001010E’ Various posts suggested to remove all dependencies but &#8230; <a href="/blog/2010/05/03/an-error-occurred-while-validating-hresult-8001010e/" class="more-link">Continue reading <span class="screen-reader-text">An error occurred while validating.  HRESULT = &#8216;8001010E&#8217;</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2010/05/03/an-error-occurred-while-validating-hresult-8001010e/">An error occurred while validating.  HRESULT = &#8216;8001010E&#8217;</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Just a quick tip. While upgrading one of my projects from VS.NET 2008 to VS.NET 2010 I ran into a problem I wasn’t able to find a correct solution for it anywhere.</p>
+<p>While building my setup projects I got:</p>
+<p>An error occurred while validating.  HRESULT = ‘8001010E’</p>
+<p>Various posts suggested to remove all dependencies but in my case it was caused by an invalid reference to the framework. This is what I did to have it compile again:</p>
+<ul>
+<li>Right-click .vdproj</li>
+<li>Select “View” | “Launch Conditions”</li>
+<li>Right-click “.NET Framework”</li>
+<li>Select “Properties Window”</li>
+<li>Expand “Version” dropdown</li>
+<li>Select correct framework e.g. if it is currently set to “3.5.1234” you might select a similar in the dropdown list i.e. “.NET Framework 3.5”.</li>
+</ul>
+<p>Maybe it might help you as well.</p>
+<p>The post <a rel="nofollow" href="/blog/2010/05/03/an-error-occurred-while-validating-hresult-8001010e/">An error occurred while validating.  HRESULT = &#8216;8001010E&#8217;</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2010/05/03/an-error-occurred-while-validating-hresult-8001010e/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3413</post-id>	</item>
+		<item>
+		<title>Facebook CSS for will_paginate gem</title>
+		<link>/blog/2010/01/27/facebook-css-for-will_paginate-gem/</link>
+					<comments>/blog/2010/01/27/facebook-css-for-will_paginate-gem/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Tue, 26 Jan 2010 22:00:00 +0000</pubDate>
+				<category><![CDATA[development]]></category>
+		<guid isPermaLink="false">/blog/2010/01/27/facebook-css-for-will_paginate-gem/</guid>
+
+					<description><![CDATA[<p>Today I needed to add pagination to my Danish beta application for handling your accounting called Hurtigmoms. Since I&#8217;m developing in Rails it was a logically choice to use “will_paginate” to support pagination. Our prototype layout is using a Facebook header and so I wanted my pagination control to mimic their style. If you need &#8230; <a href="/blog/2010/01/27/facebook-css-for-will_paginate-gem/" class="more-link">Continue reading <span class="screen-reader-text">Facebook CSS for will_paginate gem</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2010/01/27/facebook-css-for-will_paginate-gem/">Facebook CSS for will_paginate gem</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I needed to add pagination to my Danish beta application for handling your accounting called <a href="http://hurtigmoms.dk/">Hurtigmoms</a>. Since I&#8217;m developing in Rails it was a logically choice to use “will_paginate” to support pagination.</p>
+<p>Our prototype layout is using a Facebook header and so I wanted my pagination control to mimic their style. If you need something similar you might want to take a look at my CSS styles which are using the default class names used by will_paginate.</p>
+<pre><code>    .pagination {
+        font-size: 11px;
+        float: right;
+        margin: 0;
+        padding: 3px 0 4px;
+    }
+        .pagination a,
+        .pagination span {
+            padding: 3px 3px 2px;
+        }
+        .pagination .disabled {
+            background:none repeat scroll 0 0 transparent;
+            border:medium none;
+            color:#999999;
+            cursor:default;
+        }
+        .pagination a {
+            color:#3B5998;
+            cursor:pointer;
+            text-decoration:none;
+        }
+        .pagination a:hover {
+            background-color:#3B5998;
+            border-bottom:1px solid #3B5998;
+            border-color:#D8DFEA #D8DFEA #3B5998;
+            color:#FFFFFF;
+            text-decoration:none;
+        }
+        .pagination .current {}
+            .pagination .current {
+                border-bottom:2px solid #3B5998;
+                border-color:#3B5998;
+                color:#3B5998;
+                font-weight:bold;
+                padding-left:2px;
+                padding-right:2px;
+            }
+            .pagination .current a:hover {
+                background-color:#3B5998;
+                color:#FFFFFF;
+            }
+
+        .pagination .prev_page {
+
+        }
+        .pagination .next_page {
+
+        }
+</code></pre>
+<p>Just copy and paste it into your application css file and you’re done.</p>
+<p>This is how it looks:</p>
+<p><img src="https://i0.wp.com/www.theill.com/stuff/screenshots/facebook-pagination-css-style-20100127-114918.png?w=660" data-recalc-dims="1" /></p>
+<p>The post <a rel="nofollow" href="/blog/2010/01/27/facebook-css-for-will_paginate-gem/">Facebook CSS for will_paginate gem</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2010/01/27/facebook-css-for-will_paginate-gem/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3414</post-id>	</item>
+		<item>
+		<title>Upgrading Rails Engines Project to Rails 2.3.2</title>
+		<link>/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/</link>
+					<comments>/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Sun, 15 Mar 2009 22:00:00 +0000</pubDate>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[rails]]></category>
+		<category><![CDATA[tip]]></category>
+		<guid isPermaLink="false">/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/</guid>
+
+					<description><![CDATA[<p>My lifestyleapps project (still in very early beta) was running Rails 2.2.2 with the Rails Engines plugin ten minutes ago. Today, Rails 2.3.2 was released so I decided to try if I could easily upgrade it and avoid using the Rails Engines plugin anymore. It was beautiful simple and took me less than ten minutes. &#8230; <a href="/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/" class="more-link">Continue reading <span class="screen-reader-text">Upgrading Rails Engines Project to Rails 2.3.2</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/">Upgrading Rails Engines Project to Rails 2.3.2</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>My <a href="http://lifestyleapps.com/">lifestyleapps</a> project (still in very early beta) was running Rails 2.2.2 with the Rails Engines plugin ten minutes ago. Today, Rails 2.3.2 was released so I decided to try if I could easily upgrade it and avoid using the Rails Engines plugin anymore. It was beautiful simple and took me less than ten minutes.</p>
+<p>First, I had to update our Apache Passenger module with a version supporting Rails 2.3 so I did a</p>
+<pre><code>$ gem update passenger
+</code></pre>
+<p>and then run the install to build our apache module</p>
+<pre><code>$ passenger-install-apache2-module
+</code></pre>
+<p>In my config/environment.rb I changed</p>
+<pre><code>RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
+</code></pre>
+<p>to</p>
+<pre><code>RAILS_GEM_VERSION = '2.3.2' unless defined? RAILS_GEM_VERSION
+</code></pre>
+<p>and asked Rails to update my various script files by issuing</p>
+<pre><code>$ rake rails:update
+</code></pre>
+<p>Finally I remembered the application.rb should be named application_controller.rb now so I issued an explicit task for this as well</p>
+<pre><code>$ rake rails:update:application_controller
+</code></pre>
+<p>In the Rails Engines plugin you need to have the “routes.rb” file in the root of your plugin but with Rails 2.3.2 you should have it in the ‘config’ folder under your plugin and its content should be wrapped in “ActionController::Routing::Routes.draw do |map|” as the root routes.rb. So I changed this from</p>
+<pre><code>/vendor/plugins/life_intake/routes.rb
+</code></pre>
+<p>to</p>
+<pre><code>/vendor/plugins/life_intake/config/routes.rb
+</code></pre>
+<p>The contents of this routes.rb was changed from</p>
+<pre><code>map.resources :foods
+</code></pre>
+<p>to</p>
+<pre><code>ActionController::Routing::Routes.draw do |map|
+  map.resources :foods
+end
+</code></pre>
+<p>Finally I had to update the root “routes.rb” to avoid using the “from_plugin” call e.g. I simply removed lines such as</p>
+<pre><code>map.from_plugin :life_intake
+</code></pre>
+<p>Now I don’t need the Rails Engines plugin anymore so I removed it with</p>
+<pre><code>$ ./script/plugin remove engines
+</code></pre>
+<p>That’s it .. I was now able to run my tests and start up my project and have it run on Rails 2.3.2.</p>
+<p>Enjoy!</p>
+<p>The post <a rel="nofollow" href="/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/">Upgrading Rails Engines Project to Rails 2.3.2</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2009/03/16/upgrading-rails-engines-project-to-rails-2-3-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3417</post-id>	</item>
+		<item>
+		<title>Extend your shell toolbox with pbcopy</title>
+		<link>/blog/2009/03/12/extend-your-shell-toolbox-with-pbcopy/</link>
+					<comments>/blog/2009/03/12/extend-your-shell-toolbox-with-pbcopy/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Wed, 11 Mar 2009 22:00:00 +0000</pubDate>
+				<category><![CDATA[development]]></category>
+		<category><![CDATA[shell]]></category>
+		<category><![CDATA[tip]]></category>
+		<guid isPermaLink="false">/blog/2009/03/12/extend-your-shell-toolbox-with-pbcopy/</guid>
+
+					<description><![CDATA[<p>I&#8217;m developing Rails applications on Mac and a command which isn’t used enough in my opinion is “pbcopy”. This command will allow you to grab the standard input from a terminal and put it on the clipboard. I find myself using commands such as “pwd &#124; pbcopy” a lot. This will grab my current working &#8230; <a href="/blog/2009/03/12/extend-your-shell-toolbox-with-pbcopy/" class="more-link">Continue reading <span class="screen-reader-text">Extend your shell toolbox with pbcopy</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2009/03/12/extend-your-shell-toolbox-with-pbcopy/">Extend your shell toolbox with pbcopy</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;m developing Rails applications on Mac and a command which isn’t used enough in my opinion is “pbcopy”. This command will allow you to grab the standard input from a terminal and put it on the clipboard.</p>
+<p>I find myself using commands such as “pwd | pbcopy” a lot. This will grab my current working directory and make it available in my clipboard allowing me to easily paste it into another terminal or application. This avoids the need for you to grab your mouse to paste a simple line.</p>
+<p>Just a quick tip for developers switching between terminal and desktop applications on a regular basis.</p>
+<p>The post <a rel="nofollow" href="/blog/2009/03/12/extend-your-shell-toolbox-with-pbcopy/">Extend your shell toolbox with pbcopy</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2009/03/12/extend-your-shell-toolbox-with-pbcopy/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3418</post-id>	</item>
+	</channel>
+</rss>

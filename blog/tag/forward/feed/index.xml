@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>forward &#8211; Peter Theill Site</title>
+	<atom:link href="/blog/tag/forward/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>What’s going on in the personal life of Peter Theill</description>
+	<lastBuildDate>Sun, 09 Jul 2017 04:49:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5</generator>
+
+<image>
+	<url>https://i2.wp.com/www.theill.com/wp-content/uploads/2017/07/cropped-me-color-lowpoly-retouched-1024.jpg?fit=32%2C32&#038;ssl=1</url>
+	<title>forward &#8211; Peter Theill Site</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">131552097</site>	<item>
+		<title>Deploying to production from 10km in the air</title>
+		<link>/blog/2017/07/06/deploying-to-production-from-10km-in-the-air/</link>
+					<comments>/blog/2017/07/06/deploying-to-production-from-10km-in-the-air/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Thu, 06 Jul 2017 04:55:27 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[forward]]></category>
+		<guid isPermaLink="false">http://life.theill.com/?p=2239</guid>
+
+					<description><![CDATA[<p>The post <a rel="nofollow" href="/blog/2017/07/06/deploying-to-production-from-10km-in-the-air/">Deploying to production from 10km in the air</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="https://i0.wp.com/life.theill.com/wp-content/uploads/2017/07/img_0302.jpg"><img data-attachment-id="2248" data-permalink="/blog/2017/07/06/deploying-to-production-from-10km-in-the-air/img_0302-jpg/" data-orig-file="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?fit=3264%2C2448&amp;ssl=1" data-orig-size="3264,2448" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;2.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 6&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1499273170&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;4.15&quot;,&quot;iso&quot;:&quot;250&quot;,&quot;shutter_speed&quot;:&quot;0.03030303030303&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="img_0302.jpg" data-image-description="" data-medium-file="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?fit=300%2C225&amp;ssl=1" data-large-file="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?fit=660%2C495&amp;ssl=1" loading="lazy" class="alignnone size-full wp-image-2248" src="https://i0.wp.com/life.theill.com/wp-content/uploads/2017/07/img_0302.jpg?resize=660%2C495" alt="" width="660" height="495" srcset="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?w=3264&amp;ssl=1 3264w, https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?resize=1024%2C768&amp;ssl=1 1024w, https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?w=1320&amp;ssl=1 1320w, https://i1.wp.com/www.theill.com/wp-content/uploads/2017/07/img_0302.jpg?w=1980&amp;ssl=1 1980w" sizes="(max-width: 660px) 100vw, 660px" data-recalc-dims="1" /></a></p>
+<p>The post <a rel="nofollow" href="/blog/2017/07/06/deploying-to-production-from-10km-in-the-air/">Deploying to production from 10km in the air</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2017/07/06/deploying-to-production-from-10km-in-the-air/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2239</post-id>	</item>
+		<item>
+		<title>Partnering with Better Finds</title>
+		<link>/blog/2017/05/17/partnering-with-better-finds/</link>
+					<comments>/blog/2017/05/17/partnering-with-better-finds/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Wed, 17 May 2017 06:58:28 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[betterfinds]]></category>
+		<category><![CDATA[charity]]></category>
+		<category><![CDATA[doinggood]]></category>
+		<category><![CDATA[forward]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/work/2017/05/17/partnering-with-better-finds/</guid>
+
+					<description><![CDATA[<p>Better Finds needed a charity platform and chose Forward for that. Currently we’re working together to improve our Forward platform to suit requirements for Better Finds and it’s going to be great. Better Finds is focusing on US whereas Forward has been more focused on European countries.</p>
+<p>The post <a rel="nofollow" href="/blog/2017/05/17/partnering-with-better-finds/">Partnering with Better Finds</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><img data-attachment-id="2197" data-permalink="/blog/2017/05/17/partnering-with-better-finds/logo-site-header/" data-orig-file="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/05/logo-site-header.png?fit=480%2C86&amp;ssl=1" data-orig-size="480,86" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="logo-site-header" data-image-description="" data-medium-file="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/05/logo-site-header.png?fit=300%2C54&amp;ssl=1" data-large-file="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/05/logo-site-header.png?fit=480%2C86&amp;ssl=1" loading="lazy" class="alignright wp-image-2197 size-medium" src="https://i2.wp.com/life.theill.com/wp-content/uploads/2017/05/logo-site-header-300x54.png?resize=300%2C54" alt="" width="300" height="54" srcset="https://i1.wp.com/www.theill.com/wp-content/uploads/2017/05/logo-site-header.png?resize=300%2C54&amp;ssl=1 300w, https://i1.wp.com/www.theill.com/wp-content/uploads/2017/05/logo-site-header.png?w=480&amp;ssl=1 480w" sizes="(max-width: 300px) 100vw, 300px" data-recalc-dims="1" /><a href="http://betterfinds.net/">Better Finds</a> needed a charity platform and chose Forward for that. Currently we’re working together to improve our Forward platform to suit requirements for Better Finds and it’s going to be great.</p>
+<p>Better Finds is focusing on US whereas Forward has been more focused on European countries.</p>
+<p>The post <a rel="nofollow" href="/blog/2017/05/17/partnering-with-better-finds/">Partnering with Better Finds</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2017/05/17/partnering-with-better-finds/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">5</post-id>	</item>
+		<item>
+		<title>Introducing Forward &#8211; my latest project</title>
+		<link>/blog/2015/11/05/forward-charity-donations/</link>
+					<comments>/blog/2015/11/05/forward-charity-donations/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Thu, 05 Nov 2015 00:25:03 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[charity]]></category>
+		<category><![CDATA[donate]]></category>
+		<category><![CDATA[forward]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/work/2015/11/05/forward-charity-donations/</guid>
+
+					<description><![CDATA[<p>Forward is my latest project and allow you to donate your old stuff to our platform. When someone buy your stuff money goes to a charity you have chosen. Both an iPhone and Android app is available from respective stores and you’re able to read much more about this cool project from our Forward web &#8230; <a href="/blog/2015/11/05/forward-charity-donations/" class="more-link">Continue reading <span class="screen-reader-text">Introducing Forward &#8211; my latest project</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2015/11/05/forward-charity-donations/">Introducing Forward &#8211; my latest project</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="https://forwardapphq.com/">Forward</a> is my latest project and allow you to donate your old stuff to our platform. When someone buy your stuff money goes to a charity you have chosen.</p>
+<p>Both an iPhone and Android app is available from respective stores and you’re able to read much more about this cool project from our <a href="https://forwardapphq.com/">Forward web site</a>.</p>
+<p>The post <a rel="nofollow" href="/blog/2015/11/05/forward-charity-donations/">Introducing Forward &#8211; my latest project</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2015/11/05/forward-charity-donations/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">10</post-id>	</item>
+		<item>
+		<title>Latest hobby project Forward hits App Store</title>
+		<link>/blog/2015/06/18/latest-hobby-project-forward-hits-app-store/</link>
+					<comments>/blog/2015/06/18/latest-hobby-project-forward-hits-app-store/#respond</comments>
+		
+		<dc:creator><![CDATA[Peter]]></dc:creator>
+		<pubDate>Thu, 18 Jun 2015 23:44:32 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[charity]]></category>
+		<category><![CDATA[forward]]></category>
+		<guid isPermaLink="false">http://207.154.248.63/2015/06/18/latest-hobby-project-forward-hits-app-store/</guid>
+
+					<description><![CDATA[<p>Recently I’ve been working on a small hobby-project called Forward. This project is quite simply &#8211; donate your old, used stuff and have people donate to your chosen charity. I’ve worked on Forward for around 3 months. It’s available in Apple App Store now and will be available for Android later this year. The usage &#8230; <a href="/blog/2015/06/18/latest-hobby-project-forward-hits-app-store/" class="more-link">Continue reading <span class="screen-reader-text">Latest hobby project Forward hits App Store</span></a></p>
+<p>The post <a rel="nofollow" href="/blog/2015/06/18/latest-hobby-project-forward-hits-app-store/">Latest hobby project Forward hits App Store</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p>Recently I’ve been working on a small hobby-project called Forward. This project is quite simply &#8211; donate your old, used stuff and have people donate to your chosen charity.</p>
+<p>I’ve worked on Forward for around 3 months. It’s available in Apple App Store now and will be available for Android later this year.</p>
+<p>The usage is simple &#8211; if you have something to share please do it and select if it’s worth either 10, 25 or 100 kroner.</p>
+<p>Once shared people are able to claim it and once claimed the request amount will be transferred to charities bank account.</p>
+<p>See more at <a href="http://forwardapphq.com/">http://forwardapphq.com/</a> or via Facebook at <a href="http://www.facebook.com/forwardapphq">www.facebook.com/forwardapphq</a></p>
+<p>The post <a rel="nofollow" href="/blog/2015/06/18/latest-hobby-project-forward-hits-app-store/">Latest hobby project Forward hits App Store</a> appeared first on <a rel="nofollow" href="/">Peter Theill Site</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/blog/2015/06/18/latest-hobby-project-forward-hits-app-store/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1926</post-id>	</item>
+	</channel>
+</rss>
